@@ -2405,3 +2405,7 @@ a.cert-card:focus-visible {
 .story-flip { grid-template-columns: minmax(0, 340px) minmax(0, 1fr); }
 @media (max-width: 800px) { .story-flip { grid-template-columns: 1fr; } }
 .story-media img.fit-contain { object-fit: contain; background: #09101f; }
+
+.hub-alt { margin-top: 0.6rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-dim); }
+.hub-alt a { color: var(--accent-teal); text-decoration: none; }
+.hub-alt a:hover { text-decoration: underline; }
