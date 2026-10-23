@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 75" width="280" height="75">
+  <defs>
+    <linearGradient id="yasGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+  </defs>
+  <!-- 100% transparent, NO glow, NO background box -->
+
+  <!-- Left: YAS (Youth in Agribusiness) -->
+  <g transform="translate(6, 10)">
+    <!-- Y with Sprout -->
+    <path d="M0 2 L12 24 L12 48 L20 48 L20 24 L32 2 L20 2 L16 12 L12 2 Z" fill="url(#yasGrad)"/>
+    <!-- Small Leaf Sprout in Y -->
+    <path d="M12 14 C12 8, 16 6, 20 8 C20 12, 16 16, 12 14 Z" fill="#22c55e"/>
+    <path d="M16 10 C18 6, 22 5, 24 7 C24 10, 20 13, 16 10 Z" fill="#16a34a"/>
+    <!-- A -->
+    <path d="M30 48 L42 2 L52 2 L64 48 L53 48 L50 36 L38 36 L36 48 Z M40 26 L48 26 L44 11 Z" fill="url(#yasGrad)"/>
+    <!-- S -->
+    <path d="M72 14 C68 11, 64 12, 64 16 C64 24, 82 23, 82 36 C82 46, 73 49, 64 49 C57 49, 52 46, 48 40 L56 34 C58 38, 62 40, 66 40 C69 40, 72 38, 72 34 C72 28, 54 28, 54 16 C54 6, 63 2, 72 2 C78 2, 82 4, 86 8 L79 16 Z" fill="url(#yasGrad)"/>
+    <text x="0" y="58" font-family="'Inter', sans-serif" font-size="7.5" font-weight="700" fill="#fdba74" letter-spacing="0.04em">youth in agribusiness</text>
+  </g>
+
+  <!-- Center: IITA -->
+  <g transform="translate(108, 12)">
+    <text x="0" y="34" font-family="'Space Grotesk', 'Impact', sans-serif" font-size="34" font-weight="900" fill="#f97316" letter-spacing="0.04em">IITA</text>
+    <text x="2" y="47" font-family="'Inter', sans-serif" font-size="7" font-weight="600" fill="#fed7aa" font-style="italic">Transforming African Agriculture</text>
+  </g>
+
+  <!-- Right: CGIAR Emblem -->
+  <g transform="translate(232, 12)">
+    <!-- Wheat/Ear Leaves -->
+    <path d="M18 4 C14 10, 16 20, 20 28 C24 20, 26 10, 22 4 Z" fill="#22c55e"/>
+    <path d="M12 14 C8 20, 10 28, 18 32 C18 24, 16 18, 12 14 Z" fill="#16a34a"/>
+    <path d="M28 14 C32 20, 30 28, 22 32 C22 24, 24 18, 28 14 Z" fill="#16a34a"/>
+    <path d="M8 26 C4 32, 8 38, 18 40 C16 34, 12 30, 8 26 Z" fill="#15803d"/>
+    <path d="M32 26 C36 32, 32 38, 22 40 C24 34, 28 30, 32 26 Z" fill="#15803d"/>
+    <text x="20" y="52" font-family="'Inter', sans-serif" font-size="8.5" font-weight="800" fill="#4ade80" text-anchor="middle">CGIAR</text>
+  </g>
+</svg>

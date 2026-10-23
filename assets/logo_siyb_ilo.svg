@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 75" width="280" height="75">
+  <!-- 100% transparent, NO glow, NO dark box -->
+
+  <!-- Left: SIYB Logo -->
+  <g transform="translate(10, 8)">
+    <!-- 3 Colorful Arcs: Orange, Cyan, Green -->
+    <!-- Orange Arc (Top) -->
+    <path d="M12 20 C18 6, 38 6, 44 18 C38 12, 22 12, 16 22 Z" fill="#f59e0b"/>
+    <!-- Cyan Arc (Right) -->
+    <path d="M42 12 C52 20, 52 38, 40 44 C44 36, 42 22, 36 16 Z" fill="#06b6d4"/>
+    <!-- Green Arc (Left) -->
+    <path d="M14 18 C6 26, 6 42, 20 48 C14 40, 14 26, 20 20 Z" fill="#22c55e"/>
+
+    <!-- SIYB Lettering -->
+    <text x="56" y="32" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="0.04em">SIYB</text>
+    <text x="10" y="54" font-family="'Inter', sans-serif" font-size="6.5" font-weight="700" fill="#cbd5e1" letter-spacing="0.06em">START AND IMPROVE YOUR BUSINESS</text>
+  </g>
+
+  <!-- Right: ILO (International Labour Organization) Official Emblem -->
+  <g transform="translate(195, 6)">
+    <!-- Wreath of Leaves (Left & Right) in Blue -->
+    <g stroke="#38bdf8" stroke-width="1.8" fill="none">
+      <path d="M18 12 C10 18, 10 36, 20 48 C28 56, 44 56, 52 48 C62 36, 62 18, 54 12"/>
+    </g>
+    <!-- Leaf pairs on wreath -->
+    <g fill="#38bdf8">
+      <ellipse cx="12" cy="22" rx="4" ry="2" transform="rotate(-30 12 22)"/>
+      <ellipse cx="11" cy="34" rx="4" ry="2" transform="rotate(-10 11 34)"/>
+      <ellipse cx="16" cy="45" rx="4" ry="2" transform="rotate(25 16 45)"/>
+      <ellipse cx="60" cy="22" rx="4" ry="2" transform="rotate(30 60 22)"/>
+      <ellipse cx="61" cy="34" rx="4" ry="2" transform="rotate(10 61 34)"/>
+      <ellipse cx="56" cy="45" rx="4" ry="2" transform="rotate(-25 56 45)"/>
+    </g>
+    <!-- Center Gear in Blue -->
+    <circle cx="36" cy="30" r="14" fill="#0284c7" stroke="#38bdf8" stroke-width="1.5"/>
+    <g fill="#38bdf8">
+      <rect x="34" y="14" width="4" height="4"/>
+      <rect x="34" y="42" width="4" height="4"/>
+      <rect x="20" y="28" width="4" height="4"/>
+      <rect x="48" y="28" width="4" height="4"/>
+      <rect x="24" y="18" width="4" height="4" transform="rotate(45 26 20)"/>
+      <rect x="44" y="38" width="4" height="4" transform="rotate(45 46 40)"/>
+      <rect x="44" y="18" width="4" height="4" transform="rotate(45 46 20)"/>
+      <rect x="24" y="38" width="4" height="4" transform="rotate(45 26 40)"/>
+    </g>
+    <!-- White Core with ILO -->
+    <circle cx="36" cy="30" r="10" fill="#ffffff"/>
+    <text x="36" y="34.5" font-family="'Space Grotesk', 'Times New Roman', serif" font-size="10" font-weight="900" fill="#0f172a" text-anchor="middle" letter-spacing="-0.02em">ILO</text>
+    <text x="36" y="60" font-family="'Inter', sans-serif" font-size="5.5" font-weight="600" fill="#94a3b8" text-anchor="middle">International Labour Organization</text>
+  </g>
+</svg>

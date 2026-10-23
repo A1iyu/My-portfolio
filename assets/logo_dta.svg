@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 70" width="260" height="70">
+  <!-- NO background: 100% transparent -->
+  <!-- NO outer glow -->
+  <g transform="translate(10, 8)">
+    <!-- Emerald Graduation Cap -->
+    <path d="M30 6 L58 18 L30 30 L2 18 Z" fill="#10b981"/>
+    <!-- Cap Underneath Base -->
+    <path d="M12 25 L12 38 C12 45, 48 45, 48 38 L48 25" fill="#059669"/>
+    <!-- Tassel -->
+    <path d="M52 21 L56 34 L52 38 L50 34 Z" fill="#34d399"/>
+    <!-- Cap inner rim highlight -->
+    <path d="M18 27 C24 31, 36 31, 42 27" stroke="#6ee7b7" stroke-width="2" fill="none"/>
+  </g>
+  <!-- Text: Digital Training Academy -->
+  <g transform="translate(78, 12)">
+    <text x="0" y="22" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="20" font-weight="700" fill="#ffffff" letter-spacing="0.02em">Digital Training</text>
+    <text x="0" y="44" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="20" font-weight="700" fill="#34d399" letter-spacing="0.02em">Academy</text>
+  </g>
+</svg>

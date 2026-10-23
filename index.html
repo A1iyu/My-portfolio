@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aliyu Mustapha Abdulhamid | Frontend Developer &amp; IT Support Specialist</title>
+  <meta name="description" content="Portfolio of Aliyu Mustapha Abdulhamid - Computer Science undergraduate, Frontend Developer, IT Support Specialist, and Cybersecurity enthusiast based in Nigeria.">
+  <meta name="keywords" content="Aliyu Mustapha Abdulhamid, Frontend Developer, IT Support, Cybersecurity, 3MTT, Nigeria, Web Development, Networking">
+  <meta name="author" content="Aliyu Mustapha Abdulhamid">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aliyu Mustapha Abdulhamid | Portfolio">
+  <meta property="og:description" content="Computer Science undergraduate and frontend developer in Nigeria, with hands-on IT support, hospital app rollout support and a growing focus on cybersecurity.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google Fonts: Inter, Space Grotesk, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="tech-theme">
+  <!-- Matrix / Cyber Particle Background Canvas -->
+  <canvas id="cyber-canvas"></canvas>
+
+  <!-- Ambient Glow Blobs -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Navigation Bar (Clean, no numbers, clean brand) -->
+  <header class="navbar-wrapper" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo" id="nav-brand">
+        <span class="brand-title">Aliyu Mustapha</span>
+        <span class="status-indicator" title="2+ years of experience">
+          <span class="status-text">2+ years exp</span>
+        </span>
+      </a>
+
+      <!-- Menu without numbers -->
+      <nav class="nav-links" id="nav-menu">
+        <a href="#hero" class="nav-link active" data-nav="hero">Home</a>
+        <a href="#about" class="nav-link" data-nav="about">About</a>
+        <a href="#experience" class="nav-link" data-nav="experience">Experience</a>
+        <a href="#projects" class="nav-link" data-nav="projects">Projects</a>
+        <a href="#certificates" class="nav-link" data-nav="certificates">Certs</a>
+        <a href="#contact" class="nav-link" data-nav="contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Opens CV in new tab -->
+        <a href="assets/Aliyu_Mustapha_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-cyan" id="nav-resume-btn" title="Open CV in new tab">
+          <svg class="icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>View CV</span>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION (MATCHING IMAGE 1) -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <div class="hero-top">
+        <!-- Hero Introduction Text (Exact text from Image 1) -->
+        <div class="hero-intro">
+          <div class="hero-badge">
+            <span class="terminal-icon">&gt;_</span>
+            <span>COMPUTER SCIENCE &amp; CYBERSECURITY</span>
+          </div>
+
+          <h1 class="hero-headline">Hi, I&rsquo;m <span class="hl-name">Aliyu</span> &mdash; a Frontend Developer &amp; IT Support Specialist.</h1>
+
+          <p class="hero-lead">I build clean, responsive websites and web apps with HTML, CSS and JavaScript, and I care as much about how they work as how they look.</p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary-teal" id="hero-get-in-touch">
+              <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <span>Get in touch</span>
+            </a>
+
+            <a href="https://github.com/A1iyu" target="_blank" rel="noopener noreferrer" class="btn btn-github" id="hero-github-link">
+              <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+
+            <!-- LinkedIn Link -->
+            <a href="https://www.linkedin.com/in/a1iyu-mustapha" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin" id="hero-linkedin-link">
+              <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <!-- View CV in new tab -->
+            <a href="assets/Aliyu_Mustapha_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cyber" id="hero-view-cv">
+              <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              <span>View CV</span>
+            </a>
+          </div>
+        </div>
+
+
+        <!-- Profile photo with tech-styled frame -->
+        <figure class="profile-frame" id="profile-frame">
+          <div class="profile-grid-bg" aria-hidden="true"></div>
+          <div class="profile-photo-wrap">
+            <img src="assets/profile.jpg" alt="Portrait of Aliyu Mustapha" class="profile-photo" width="640" height="640" fetchpriority="high">
+            <span class="profile-scan" aria-hidden="true"></span>
+            <span class="corner corner-tl" aria-hidden="true"></span>
+            <span class="corner corner-tr" aria-hidden="true"></span>
+            <span class="corner corner-bl" aria-hidden="true"></span>
+            <span class="corner corner-br" aria-hidden="true"></span>
+          </div>
+        </figure>
+        </div>
+
+        <!-- Terminal Styled Summary Window (Clean, focused on about me, matching Image 1) -->
+        <div class="terminal-wrapper" id="terminal-container">
+          <div class="terminal-window">
+            
+            <!-- Window Titlebar with 3 dots -->
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red" title="Close"></span>
+                <span class="dot dot-yellow" title="Minimize"></span>
+                <span class="dot dot-green" title="Maximize"></span>
+              </div>
+              <div class="terminal-header-meta">PROFILE_SUMMARY</div>
+            </div>
+
+            <!-- Terminal Screen Body (Summary of About Me, exactly like Image 1) -->
+            <div class="terminal-body" id="terminal-screen">
+              <div class="terminal-lines" id="terminal-content">
+                <div class="term-line term-comment"># who am i</div>
+                <div class="term-line term-cmd"><span class="prompt-sym">$</span><span class="cmd-text">whoami</span></div>
+                <div class="term-line term-output term-output-whoami">aliyu_mustapha</div>
+                <div class="term-line term-cmd"><span class="prompt-sym">$</span><span class="cmd-text">cat focus.txt</span></div>
+                <div class="term-line term-output term-output-focus">frontend · it-support · cybersec</div>
+                <div class="term-line term-cmd"><span class="prompt-sym">$</span><span class="cmd-text">ls skills/</span></div>
+                <div class="term-line term-output term-output-skills">javascript  html-css  git  networking  repair</div>
+                <div class="term-line term-cmd"><span class="prompt-sym">$</span><span class="cmd-text">status</span></div>
+                <div class="term-line term-output term-output-status">3MTT software dev: active</div>
+                <div class="term-line term-cursor-line"><span class="terminal-cursor">█</span></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- KEY STATS / TECH HIGHLIGHTS STRIP -->
+    <section class="stats-strip">
+      <div class="container stats-grid">
+        <div class="stat-card">
+          <div class="stat-val">50+</div>
+          <div class="stat-label">Devices Audited &amp; Restored</div>
+          <div class="stat-sub">Smartphones, PCs &amp; OS Deployments</div>
+        </div>
+        <div class="stat-card highlight">
+          <div class="stat-val">3MTT</div>
+          <div class="stat-label">Software Dev Fellow</div>
+          <div class="stat-sub">Federal Government of Nigeria</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">ICSE 2025</div>
+          <div class="stat-label">Conference Volunteer</div>
+          <div class="stat-sub">UBEC Digital Resource Center</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-val">3+</div>
+          <div class="stat-label">Programmes &amp; Credentials</div>
+          <div class="stat-sub">CyberSec, TVET, 3MTT, IITA, ILO, ICSE</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION (EXPANDED TO FILL FULL WIDTH - CONTACT INFO REMOVED AS REQUESTED) -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">About <span class="text-cyan">Me</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- Single expanded About card (no heading bar) -->
+        <div class="about-expanded-grid">
+          <div class="tech-box about-main-box">
+            <div class="tech-box-body">
+              <div class="about-text">
+                <p class="lead-p">
+                  Computer Science undergraduate at NOUN and <strong>cybersecurity enthusiast</strong> with hands-on experience in <strong>IT support, networking, device repair, and software rollout support</strong>. I completed Nigeria's <strong>3MTT Software Development programme</strong> in September 2026.
+                </p>
+                <p>
+                  I build responsive, clean frontend web applications using <strong>JavaScript (ES6+), HTML5/CSS3, and Git/GitHub</strong>. I troubleshoot hardware and software faults, test and tidy network setups, and put together reliable technical solutions across commercial and healthcare environments.
+                </p>
+                <p>
+                  My work spans <strong>first-line hospital software rollout support</strong> at KMC Hospital, <strong>structured LAN cabling</strong>, <strong>GSM component diagnostics</strong>, and <strong>low-voltage off-grid solar PV setups</strong>. I'm open to frontend, IT support and hybrid roles.
+                </p>
+                <p>
+                  I'm now deepening my <strong>cybersecurity</strong> skills through the <strong>Digital Training Academy (DTA)</strong> and <strong>Coursera</strong>, focusing on defensive security, system hardening and secure computing.
+                </p>
+              </div>
+              <div class="about-callout-strip">
+                <div class="strip-item">
+                  <span class="strip-icon">🎓</span>
+                  <span>Computer Science Undergraduate</span>
+                </div>
+                <div class="strip-item">
+                  <span class="strip-icon">🇳🇬</span>
+                  <span>Federal Government 3MTT Graduate</span>
+                </div>
+                <div class="strip-item">
+                  <span class="strip-icon">🛡️</span>
+                  <span>Cybersecurity via DTA &amp; Coursera</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Wide Core Technical Pillars Spanning the Full Width -->
+        <div class="pillars-expanded-grid">
+          <div class="pillar-item">
+            <div class="pillar-icon">🛡️</div>
+            <div class="pillar-info">
+              <p>Network security protocols, system hardening and vulnerability assessments via DTA &amp; Coursera.</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon">💻</div>
+            <div class="pillar-info">
+              <p>Modern JavaScript (ES6+), responsive HTML5/CSS3 layouts, DOM APIs, Git/GitHub version control, and web accessibility.</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon">🌐</div>
+            <div class="pillar-info">
+              <p>RJ45 structured cabling (straight-through &amp; crossover), LAN switches, subnetting, network testers, and zero-packet-loss uptime.</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon">⚡</div>
+            <div class="pillar-info">
+              <p>Hospital application onboarding, GSM multimeter PCB diagnostics, component repair, and off-grid Solar PV power rigs.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE TIMELINE (INCLUDES ICSE 2025) -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Work <span class="text-cyan">Experience</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline">
+          
+          <!-- Experience: ICSE 2025 -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+              <span class="marker-line"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="exp-card">
+                <div class="exp-header">
+                  <div>
+                    <h3 class="exp-title">International Conference on Smart Education and Digital Literacy (ICSE)</h3>
+                    <div class="exp-company">
+                      <span class="org-icon">🎓</span>
+                      <span>UBEC Digital Resource Center (DRC)</span>
+                      <span class="badge-role">Volunteer · Timekeeping &amp; AV Support</span>
+                    </div>
+                  </div>
+                  <div class="exp-date">6 to 9 May 2025</div>
+                </div>
+
+                <div class="exp-body">
+                  <p class="exp-summary">
+                    Volunteered at ICSE, where global experts, educators and innovators met to discuss the future of education through technology. My role was timekeeping and presentation support.
+                  </p>
+                  <ul class="exp-bullets">
+                    <li>Ran the on-stage timer so presenters stayed within their time slots.</li>
+                    <li>Projected slides and kept sessions running smoothly.</li>
+                    <li>The role gave me a front-row view of how a professional event runs. I also met speakers, attendees and fellow volunteers from diverse backgrounds and saw how digital literacy is reshaping education worldwide.</li>
+                    <li>My biggest takeaway was the hands-on experience of helping run a high-level international conference.</li>
+                  </ul>
+                  <div class="tech-tags">
+                    <span class="tag">Smart Education</span>
+                    <span class="tag">Presentation Support</span>
+                    <span class="tag">Timekeeping</span>
+                    <span class="tag">UBEC DRC</span>
+                    <span class="tag">Digital Literacy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 1: Hospital App Rollout -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+              <span class="marker-line"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="exp-card">
+                <div class="exp-header">
+                  <div>
+                    <h3 class="exp-title">App Rollout &amp; Support Team</h3>
+                    <div class="exp-company">
+                      <span class="org-icon">🏥</span>
+                      <span>KMC Hospital, Nigeria</span>
+                      <span class="badge-role">Healthcare IT</span>
+                    </div>
+                  </div>
+                  <div class="exp-date">Sept 2026</div>
+                </div>
+
+                <div class="exp-body">
+                  <p class="exp-summary">
+                    Supported the rollout of the KMC hospital app, helping staff get set up and adopt the new system in day-to-day hospital workflows.
+                  </p>
+                  <ul class="exp-bullets">
+                    <li>Provided first-line technical support: logged, triaged and resolved user issues, escalating complex faults to the development team.</li>
+                    <li>Guided staff through app features and collected user feedback to help improve usability and smooth the transition.</li>
+                    <li>Documented recurring issues and fixes to speed up future resolution and onboarding.</li>
+                  </ul>
+                  <div class="tech-tags">
+                    <span class="tag">App Rollout</span>
+                    <span class="tag">Technical Support</span>
+                    <span class="tag">Issue Triage</span>
+                    <span class="tag">Documentation</span>
+                    <span class="tag">User Training</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2: Freelance Tech Assistant -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+              <span class="marker-line"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="exp-card">
+                <div class="exp-header">
+                  <div>
+                    <h3 class="exp-title">Freelance Tech Assistant</h3>
+                    <div class="exp-company">
+                      <span class="org-icon">🔧</span>
+                      <span>Self-Employed, Nigeria</span>
+                      <span class="badge-role">Hardware &amp; Systems</span>
+                    </div>
+                  </div>
+                  <div class="exp-date">Jan 2023 – Present</div>
+                </div>
+
+                <div class="exp-body">
+                  <p class="exp-summary">
+                    Delivered smartphone setup, WhatsApp data migration and troubleshooting services for over 50 clients, ensuring seamless device functionality.
+                  </p>
+                  <ul class="exp-bullets">
+                    <li>Resolved hardware-level faults including microphone failures, connectivity drops and performance degradation, restoring full device utility.</li>
+                    <li>Built a repeat client base through fast turnaround times and clear technical communication.</li>
+                  </ul>
+                  <div class="tech-tags">
+                    <span class="tag">Hardware Repair</span>
+                    <span class="tag">Data Migration</span>
+                    <span class="tag">Device Troubleshooting</span>
+                    <span class="tag">GSM Diagnostics</span>
+                    <span class="tag">Client Consultation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 3: IT Support (Part-Time) -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+              <span class="marker-line"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="exp-card">
+                <div class="exp-header">
+                  <div>
+                    <h3 class="exp-title">IT Support (Part-Time)</h3>
+                    <div class="exp-company">
+                      <span class="org-icon">🏢</span>
+                      <span>Local Business / Cyber Café, Nigeria</span>
+                      <span class="badge-role">Infrastructure</span>
+                    </div>
+                  </div>
+                  <div class="exp-date">Jan 2021 – Present</div>
+                </div>
+
+                <div class="exp-body">
+                  <p class="exp-summary">
+                    Troubleshot and resolved hardware and software faults for 50+ computers and mobile devices daily, minimizing operational disruptions.
+                  </p>
+                  <ul class="exp-bullets">
+                    <li>Set up and maintained small office networks, ensuring consistent uptime and reliable connectivity.</li>
+                    <li>Configured software applications and provided end-user support for internet and system issues.</li>
+                    <li>Installed and configured Windows and Linux operating systems on 50+ laptops.</li>
+                  </ul>
+                  <div class="tech-tags">
+                    <span class="tag">LAN Administration</span>
+                    <span class="tag">RJ45 Crimping</span>
+                    <span class="tag">Windows 10</span>
+                    <span class="tag">Linux OS</span>
+                    <span class="tag">System Maintenance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SHOWCASE -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Featured <span class="text-cyan">Projects</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-top">
+              <div class="project-folder">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#2dd4bf" stroke-width="1.8">
+                  <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <div class="project-links">
+                <span class="project-status-tag active">Production</span>
+              </div>
+            </div>
+            <h3 class="project-title">KMC Hospital App Rollout Suite</h3>
+            <p class="project-desc">
+              Digital healthcare transition deployment. Supported staff setup, first-line triage, escalation matrices, and user onboarding documentation for hospital daily workflows.
+            </p>
+            <div class="project-highlights">
+              <div class="highlight-item">✓ Zero clinical disruption during phase-in</div>
+              <div class="highlight-item">✓ Triage log &amp; recurring issue database</div>
+            </div>
+            <div class="project-tags">
+              <span>Healthcare IT</span>
+              <span>Issue Triage</span>
+              <span>SOP Manuals</span>
+              <span>Workflow Ops</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-top">
+              <div class="project-folder">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#38bdf8" stroke-width="1.8">
+                  <path d="M12 2v8m0 4v8m-8-10h8m4 0h8M4.93 4.93l5.66 5.66m4.24 4.24 5.66 5.66M4.93 19.07l5.66-5.66m4.24-4.24 5.66-5.66"/>
+                </svg>
+              </div>
+              <div class="project-links">
+                <span class="project-status-tag ongoing">Ongoing Setup</span>
+              </div>
+            </div>
+            <h3 class="project-title">Solar Panel Setup &amp; Low-Voltage Rig</h3>
+            <p class="project-desc">
+              Implemented a personal solar panel setup with exposure to low-voltage load management, battery bank health, and safety circuitry for computing devices.
+            </p>
+            <div class="project-highlights">
+              <div class="highlight-item">✓ Low-voltage DC distribution</div>
+              <div class="highlight-item">✓ Overcharge protection &amp; circuit safety</div>
+            </div>
+            <div class="project-tags">
+              <span>Solar PV</span>
+              <span>Clean Energy</span>
+              <span>Load Management</span>
+              <span>Hardware</span>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-top">
+              <div class="project-folder">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#fbbf24" stroke-width="1.8">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                </svg>
+              </div>
+              <div class="project-links">
+                <span class="project-status-tag completed">Completed 50+</span>
+              </div>
+            </div>
+            <h3 class="project-title">GSM Device Diagnostic &amp; Repair Practice</h3>
+            <p class="project-desc">
+              Conducted diagnostic and repair practice on GSM devices, addressing basic faults, microphone failures, connectivity drops, and restoration for 50+ users.
+            </p>
+            <div class="project-highlights">
+              <div class="highlight-item">✓ Component-level multimeter diagnosis</div>
+              <div class="highlight-item">✓ Secure data migration &amp; WhatsApp backups</div>
+            </div>
+            <div class="project-tags">
+              <span>GSM Repair</span>
+              <span>PCB Diagnostics</span>
+              <span>Device Audit</span>
+              <span>Hardware</span>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-top">
+              <div class="project-folder">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#a855f7" stroke-width="1.8">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <div class="project-links">
+                <span class="project-status-tag verified">School project</span>
+              </div>
+            </div>
+            <h3 class="project-title">Small-Scale 5-Device LAN Setup</h3>
+            <p class="project-desc">
+              School project: set up a small LAN of five devices, crimping Cat5e/Cat6 straight-through and crossover cables and testing the connections.
+            </p>
+            <div class="project-highlights">
+              <div class="highlight-item">✓ RJ45 crimping with 100% pinout test pass</div>
+              <div class="highlight-item">✓ Zero packet loss LAN stability</div>
+            </div>
+            <div class="project-tags">
+              <span>Structured Cabling</span>
+              <span>LAN Setup</span>
+              <span>RJ45 Crimping</span>
+              <span>Network Testing</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+        <!-- CERTIFICATES & PROGRAMMES (ALL LOGOS WITH ZERO BACKGROUND AND ZERO GLOW) -->
+    <section class="section certificates-section" id="certificates">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Certificates &amp; <span class="text-cyan">Programmes</span></h2>
+          <p class="section-subtitle">Verified programs and credentials featuring official issuing organization insignias</p>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- Symmetrical 6-Card Grid with clean transparent vector logos -->
+        <div class="certs-grid">
+          
+          <!-- Card 1: Cybersecurity (Digital Training Academy & Coursera) - Clean transparent SVG -->
+          <a class="cert-card" href="cert-details.html?id=dta" aria-label="View more details about this credential">
+            <div class="cert-logo-container">
+              <img src="assets/logo_dta.png" alt="Digital Training Academy Logo" class="cert-program-logo dta-logo" loading="lazy">
+            </div>
+            <div class="cert-details">
+              <h3 class="cert-title">Cybersecurity</h3>
+              <p class="cert-issuer">Digital Training Academy (DTA) and Coursera</p>
+              <div class="cert-badge-wrapper">
+                <span class="cert-status-badge badge-in-progress">In progress</span>
+              </div>
+              <div class="cert-tags">
+                <span>Threat Analysis</span>
+                <span>Defense</span>
+                <span>Coursera</span>
+              </div>
+            </div>
+            <span class="cert-hover-cta" aria-hidden="true">
+              <span class="cert-cta-pill">View more details
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </span>
+          </a>
+
+          <!-- Card 2: Electrical and Solar PV installation and maintenance - Clean transparent SVG -->
+          <a class="cert-card" href="cert-details.html?id=tvet" aria-label="View more details about this credential">
+            <div class="cert-logo-container">
+              <img src="assets/logo_tvet_jobitech.png" alt="FME TVET Initiative and JOBITECH Logo" class="cert-program-logo tvet-logo" loading="lazy">
+            </div>
+            <div class="cert-details">
+              <h3 class="cert-title">Electrical and Solar PV installation and maintenance</h3>
+              <p class="cert-issuer">FME TVET Initiative · John Bosco Institute of Technology Nigeria (JOBITECH)</p>
+              <div class="cert-badge-wrapper">
+                <span class="cert-status-badge badge-in-progress">In progress</span>
+              </div>
+              <div class="cert-tags">
+                <span>Solar PV</span>
+                <span>Electrical</span>
+                <span>JOBITECH</span>
+              </div>
+            </div>
+            <span class="cert-hover-cta" aria-hidden="true">
+              <span class="cert-cta-pill">View more details
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </span>
+          </a>
+
+          <!-- Card 3: Software Development Programme (3MTT) - Official Transparent NITDA asset -->
+          <a class="cert-card" href="cert-details.html?id=3mtt" aria-label="View more details about this credential">
+            <div class="cert-logo-container">
+              <img src="assets/logo_3mtt.png" alt="3MTT and Federal Government of Nigeria Logo" class="cert-program-logo threemtt-logo" loading="lazy">
+            </div>
+            <div class="cert-details">
+              <h3 class="cert-title">Software Development Programme</h3>
+              <p class="cert-issuer">3 Million Technical Talent (3MTT), Federal Government of Nigeria</p>
+              <div class="cert-badge-wrapper">
+                <span class="cert-status-badge badge-date">Sep 2026</span>
+              </div>
+              <div class="cert-tags">
+                <span>Frontend</span>
+                <span>JavaScript</span>
+                <span>Federal Govt</span>
+              </div>
+            </div>
+            <span class="cert-hover-cta" aria-hidden="true">
+              <span class="cert-cta-pill">View more details
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </span>
+          </a>
+
+          <!-- Card 4: Youth in Agribusiness Programme (IITA YAS) - Clean transparent SVG -->
+          <a class="cert-card" href="cert-details.html?id=iita-yas" aria-label="View more details about this credential">
+            <div class="cert-logo-container">
+              <img src="assets/logo_iita_yas.png" alt="YAS and IITA CGIAR Logo" class="cert-program-logo iita-logo" loading="lazy">
+            </div>
+            <div class="cert-details">
+              <h3 class="cert-title">Youth in Agribusiness Programme</h3>
+              <p class="cert-issuer">International Institute of Tropical Agriculture (IITA YAS)</p>
+              <div class="cert-badge-wrapper">
+                <span class="cert-status-badge badge-date">Jan 2024</span>
+              </div>
+              <div class="cert-tags">
+                <span>Agribusiness Tech</span>
+                <span>IITA</span>
+                <span>CGIAR</span>
+              </div>
+            </div>
+            <span class="cert-hover-cta" aria-hidden="true">
+              <span class="cert-cta-pill">View more details
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </span>
+          </a>
+
+          <!-- Card 5: Start Your Business Programme (ILO SIYB) - Clean transparent SVG -->
+          <a class="cert-card" href="cert-details.html?id=siyb" aria-label="View more details about this credential">
+            <div class="cert-logo-container">
+              <img src="assets/logo_siyb_ilo.png" alt="Start Your Business Programme - ILO SIYB Logo" class="cert-program-logo siyb-ilo-logo" loading="lazy">
+            </div>
+            <div class="cert-details">
+              <h3 class="cert-title">Start Your Business Programme</h3>
+              <p class="cert-issuer">International Labour Organization (ILO SYB)</p>
+              <div class="cert-badge-wrapper">
+                <span class="cert-status-badge badge-date">Aug 2025</span>
+              </div>
+              <div class="cert-tags">
+                <span>Business Planning</span>
+                <span>ILO SIYB</span>
+                <span>Enterprise</span>
+              </div>
+            </div>
+            <span class="cert-hover-cta" aria-hidden="true">
+              <span class="cert-cta-pill">View more details
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </span>
+          </a>
+
+          <!-- Card 6: ICSE 2025 (Enhanced Multifaceted Logo - No Background, No Glow) -->
+          <a class="cert-card" href="cert-details.html?id=icse" aria-label="View more details about this credential">
+            <div class="cert-logo-container">
+              <img src="assets/logo_icse_ubec.png" alt="ICSE 2025 and UBEC Logo" class="cert-program-logo icse-enhanced-logo" loading="lazy">
+            </div>
+            <div class="cert-details">
+              <h3 class="cert-title">International Conference on Smart Education and Digital Literacy (ICSE)</h3>
+              <p class="cert-issuer">UBEC Digital Resource Center (DRC) · Volunteer</p>
+              <div class="cert-badge-wrapper">
+                <span class="cert-status-badge badge-date">6 to 9 May 2025</span>
+              </div>
+              <div class="cert-tags">
+                <span>Smart Education</span>
+                <span>Timekeeping &amp; AV</span>
+                <span>UBEC DRC</span>
+              </div>
+            </div>
+            <span class="cert-hover-cta" aria-hidden="true">
+              <span class="cert-cta-pill">View more details
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </span>
+            </span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION (EXPANDED TO FULL WIDTH ACROSS THE PAGE) -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Get in <span class="text-cyan">Touch</span></h2>
+          <p class="section-subtitle">Looking for a frontend developer or IT support specialist? Reach out directly across any channel below.</p>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- Full-width expanded contact layout -->
+        <div class="contact-full-wrapper">
+          
+          <!-- Top Callout Banner -->
+          <div class="contact-banner-card">
+            <div class="banner-content">
+              <div class="banner-badge">
+                <span class="pulse-dot"></span>
+                <span>AVAILABLE FOR OPPORTUNITIES</span>
+              </div>
+              <h3 class="banner-title">Let's build reliable software and robust technical systems together.</h3>
+              <p class="banner-text">
+                Whether you need assistance with <strong>hospital software deployment</strong>, <strong>frontend web development</strong>, <strong>LAN infrastructure</strong>, or <strong>device diagnostics &amp; support</strong>, I am ready to contribute.
+              </p>
+            </div>
+            <div class="banner-cta">
+              <a href="mailto:aliiyumustapha1@gmail.com" class="btn btn-primary-teal btn-lg">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <span>Email Me Directly</span>
+              </a>
+              <a href="https://wa.me/2347035496905" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                </svg>
+                <span>Chat on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Expanded 4-Card Contact Grid -->
+          <div class="contact-full-grid">
+            
+            <!-- Email Card -->
+            <div class="contact-hub-card">
+              <div class="hub-card-header">
+                <div class="hub-icon email-glow">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="hub-label">PRIMARY EMAIL</div>
+              </div>
+              <div class="hub-content">
+                <a href="mailto:aliiyumustapha1@gmail.com" class="hub-main-text">aliiyumustapha1@gmail.com</a>
+                <p class="hub-desc">Direct communications for job opportunities, inquiries and project proposals.</p>
+              </div>
+              <div class="hub-actions">
+                <a href="mailto:aliiyumustapha1@gmail.com" class="hub-btn hub-btn-primary">
+                  <span>Send Email</span>
+                  <span class="hub-btn-arrow">→</span>
+                </a>
+                <button class="copy-btn" data-copy="aliiyumustapha1@gmail.com" title="Copy email address">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span class="copy-tooltip">Copy</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Phone & WhatsApp Card -->
+            <div class="contact-hub-card">
+              <div class="hub-card-header">
+                <div class="hub-icon phone-glow">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="hub-label">PHONE &amp; WHATSAPP</div>
+              </div>
+              <div class="hub-content">
+                <a href="tel:+2347035496905" class="hub-main-text">+234 703 549 6905</a>
+                <p class="hub-desc">Available for voice calls, SMS, and WhatsApp technical consultations.</p>
+              </div>
+              <div class="hub-actions">
+                <a href="https://wa.me/2347035496905" target="_blank" rel="noopener noreferrer" class="hub-btn hub-btn-primary">
+                  <span>WhatsApp</span>
+                  <span class="hub-btn-arrow">→</span>
+                </a>
+                <button class="copy-btn" data-copy="+2347035496905" title="Copy phone number">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span class="copy-tooltip">Copy</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- LinkedIn Card (Mustapha Aliyu Terry) -->
+            <div class="contact-hub-card">
+              <div class="hub-card-header">
+                <div class="hub-icon linkedin-glow">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </div>
+                <div class="hub-label">PROFESSIONAL NETWORK</div>
+              </div>
+              <div class="hub-content">
+                <a href="https://www.linkedin.com/in/a1iyu-mustapha" target="_blank" rel="noopener noreferrer" class="hub-main-text">a1iyu-mustapha</a>
+                <p class="hub-desc">Connect with me on LinkedIn for professional networking, career updates and collaborations.</p>
+              </div>
+              <div class="hub-actions">
+                <a href="https://www.linkedin.com/in/a1iyu-mustapha" target="_blank" rel="noopener noreferrer" class="hub-btn hub-btn-primary">
+                  <span>Connect</span>
+                  <span class="hub-btn-arrow">↗</span>
+                </a>
+                <button class="copy-btn" data-copy="https://www.linkedin.com/in/a1iyu-mustapha" title="Copy LinkedIn profile link">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span class="copy-tooltip">Copy</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- GitHub Card -->
+            <div class="contact-hub-card">
+              <div class="hub-card-header">
+                <div class="hub-icon github-glow">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div class="hub-label">OPEN SOURCE &amp; CODE</div>
+              </div>
+              <div class="hub-content">
+                <a href="https://github.com/A1iyu" target="_blank" rel="noopener noreferrer" class="hub-main-text">github.com/A1iyu</a>
+                <p class="hub-desc">Explore frontend repositories, web projects, and technical experiments.</p>
+              </div>
+              <div class="hub-actions">
+                <a href="https://github.com/A1iyu" target="_blank" rel="noopener noreferrer" class="hub-btn hub-btn-primary">
+                  <span>Visit GitHub</span>
+                  <span class="hub-btn-arrow">↗</span>
+                </a>
+                <button class="copy-btn" data-copy="https://github.com/A1iyu" title="Copy GitHub profile link">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                  <span class="copy-tooltip">Copy</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Base Location & Real-Time Clock Ribbon -->
+          <div class="contact-location-ribbon">
+            <div class="loc-left">
+              <span class="loc-pin">📍</span>
+              <span class="loc-name">Based in Nigeria, Abuja</span>
+              <span class="flag-icon">🇳🇬</span>
+              <span class="loc-sep">·</span>
+              <span class="loc-desc">Available for on-site, hybrid and remote opportunities</span>
+            </div>
+            <div class="loc-right">
+              <span class="local-time-tag" id="live-wat-time">WAT --:--:--</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="footer-brand">Aliyu Mustapha Abdulhamid</span>
+      </div>
+      
+      <div class="footer-center">
+        <span class="footer-social-links">
+          <a href="https://github.com/A1iyu" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span class="sep">/</span>
+          <a href="https://www.linkedin.com/in/a1iyu-mustapha" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <span class="sep">/</span>
+          <a href="mailto:aliiyumustapha1@gmail.com">Email</a>
+        </span>
+      </div>
+
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top" id="back-to-top" title="Back to top">
+          <span>TOP</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

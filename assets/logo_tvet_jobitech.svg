@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 75" width="280" height="75">
+  <!-- 100% transparent background, NO glow -->
+  <!-- Left: FME TVET Initiative -->
+  <g transform="translate(6, 12)">
+    <!-- TVET Figure with outstretched arms -->
+    <path d="M72 10 C74 10, 77 7, 77 4 C77 1.5, 74 0, 72 0 C70 0, 67 1.5, 67 4 C67 7, 70 10, 72 10 Z" fill="#38bdf8"/>
+    <!-- Figure arms & torso -->
+    <path d="M54 2 L69 13 L66 32 L72 32 L74 15 L86 4 L82 2 L71 11 L60 2 Z" fill="#38bdf8"/>
+    <!-- Text FME TVET -->
+    <text x="0" y="26" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="22" font-weight="800" fill="#ffffff" letter-spacing="0.04em">FME TVET</text>
+    <text x="18" y="42" font-family="'Inter', sans-serif" font-size="11" font-weight="600" fill="#94a3b8" letter-spacing="0.06em">Initiative</text>
+  </g>
+
+  <!-- Right: JOBITECH (John Bosco Institute of Technology) Gear Seal -->
+  <g transform="translate(205, 5)">
+    <!-- Outer Gear Circle in Blue -->
+    <circle cx="32" cy="32" r="28" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+    <!-- Gear teeth around circle -->
+    <g fill="#0284c7">
+      <rect x="29" y="1" width="6" height="6" rx="1"/>
+      <rect x="29" y="57" width="6" height="6" rx="1"/>
+      <rect x="1" y="29" width="6" height="6" rx="1"/>
+      <rect x="57" y="29" width="6" height="6" rx="1"/>
+      <rect x="10" y="10" width="6" height="6" rx="1" transform="rotate(45 13 13)"/>
+      <rect x="52" y="52" width="6" height="6" rx="1" transform="rotate(45 55 55)"/>
+      <rect x="52" y="10" width="6" height="6" rx="1" transform="rotate(45 55 13)"/>
+      <rect x="10" y="52" width="6" height="6" rx="1" transform="rotate(45 13 55)"/>
+    </g>
+    <!-- Inner White Core -->
+    <circle cx="32" cy="32" r="21" fill="#ffffff"/>
+    <!-- Torch / Flame & Tools -->
+    <path d="M30 18 L34 18 L33 28 L31 28 Z" fill="#dc2626"/>
+    <path d="M32 14 C33 16, 35 17, 33 20 C31 20, 31 16, 32 14 Z" fill="#f59e0b"/>
+    <!-- Crossed Pliers / Hammer -->
+    <line x1="22" y1="36" x2="42" y2="28" stroke="#1e293b" stroke-width="2"/>
+    <line x1="42" y1="36" x2="22" y2="28" stroke="#1e293b" stroke-width="2"/>
+    <!-- Red Banner JOBITECH -->
+    <rect x="18" y="38" width="28" height="6" fill="#dc2626" rx="1"/>
+    <text x="32" y="43" font-family="'Inter', sans-serif" font-size="4.5" font-weight="800" fill="#ffffff" text-anchor="middle">JOBITECH</text>
+  </g>
+</svg>

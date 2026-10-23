@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credential Details | Aliyu Mustapha</title>
+  <meta name="description" content="Portfolio of Aliyu Mustapha Abdulhamid - Computer Science undergraduate, Frontend Developer, IT Support Specialist, and Cybersecurity enthusiast based in Nigeria.">
+  <meta name="keywords" content="Aliyu Mustapha Abdulhamid, Frontend Developer, IT Support, Cybersecurity, 3MTT, Nigeria, Web Development, Networking">
+  <meta name="author" content="Aliyu Mustapha Abdulhamid">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aliyu Mustapha Abdulhamid | Portfolio">
+  <meta property="og:description" content="Computer Science undergraduate and frontend developer in Nigeria, with hands-on IT support, hospital app rollout support and a growing focus on cybersecurity.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google Fonts: Inter, Space Grotesk, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="tech-theme">
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <header class="navbar-wrapper" id="navbar">
+    <div class="nav-container">
+      <a href="index.html#hero" class="brand-logo" id="nav-brand">
+        <span class="brand-title">Aliyu Mustapha</span>
+        <span class="status-indicator" title="2+ years of experience">
+          <span class="status-text">2+ years exp</span>
+        </span>
+      </a>
+
+      <!-- Menu without numbers -->
+      <nav class="nav-links" id="nav-menu">
+        <a href="index.html#hero" class="nav-link active" data-nav="hero">Home</a>
+        <a href="index.html#about" class="nav-link" data-nav="about">About</a>
+        <a href="index.html#experience" class="nav-link" data-nav="experience">Experience</a>
+        <a href="index.html#projects" class="nav-link" data-nav="projects">Projects</a>
+        <a href="index.html#certificates" class="nav-link" data-nav="certificates">Certs</a>
+        <a href="index.html#contact" class="nav-link" data-nav="contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Opens CV in new tab -->
+        <a href="assets/Aliyu_Mustapha_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-cyan" id="nav-resume-btn" title="Open CV in new tab">
+          <svg class="icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>View CV</span>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="details-main">
+    <div class="container">
+      <a href="index.html#certificates" class="back-link">&larr; Back to certificates</a>
+      <div id="details-root"></div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="footer-brand">Aliyu Mustapha Abdulhamid</span>
+      </div>
+      
+      <div class="footer-center">
+        <span class="footer-social-links">
+          <a href="https://github.com/A1iyu" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <span class="sep">/</span>
+          <a href="https://www.linkedin.com/in/a1iyu-mustapha" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <span class="sep">/</span>
+          <a href="mailto:aliiyumustapha1@gmail.com">Email</a>
+        </span>
+      </div>
+
+      <div class="footer-right">
+        <a href="index.html#hero" class="back-to-top" id="back-to-top" title="Back to top">
+          <span>TOP</span>
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-btn lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-btn lightbox-prev" aria-label="Previous">&#8249;</button>
+    <img src="" alt="">
+    <video controls playsinline preload="metadata"></video>
+    <div class="lightbox-caption"></div>
+    <button class="lightbox-btn lightbox-next" aria-label="Next">&#8250;</button>
+  </div>
+
+  <script src="cert-data.js"></script>
+  <script src="cert-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160">
+  <defs>
+    <!-- Crystal Facet Gradients matching user's ICSE 2025 image -->
+    <linearGradient id="facet-blue-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="facet-cyan-light" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="70%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#bae6fd"/>
+    </linearGradient>
+    <linearGradient id="facet-violet-pink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="60%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="facet-purple-deep" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="50%" stop-color="#4338ca"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+    <linearGradient id="facet-indigo-navy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="50%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="facet-light-core" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+  </defs>
+
+  <!-- NO background rect: 100% transparent -->
+  <!-- NO glow filter: 100% crisp, enhanced geometric facets -->
+
+  <!-- TOP WORD: ICSE -->
+  <g transform="translate(16, 20)">
+    
+    <!-- Letter I -->
+    <g transform="translate(0, 0)">
+      <!-- Upper facet -->
+      <polygon points="0,0 26,0 26,28 0,38" fill="url(#facet-blue-cyan)"/>
+      <!-- Lower facet -->
+      <polygon points="0,38 26,28 26,62 0,62" fill="url(#facet-purple-deep)"/>
+      <!-- Diagonal highlight shard -->
+      <polygon points="0,38 14,33 0,55" fill="#38bdf8" opacity="0.8"/>
+    </g>
+
+    <!-- Letter C -->
+    <g transform="translate(38, 0)">
+      <!-- Top arc facet -->
+      <path d="M48,16 L48,0 C22,0 4,14 4,31 C4,48 22,62 48,62 L48,46 C32,46 22,39 22,31 C22,23 32,16 48,16 Z" fill="url(#facet-blue-cyan)"/>
+      <!-- Diagonal shard overlay across top-left to bottom-right -->
+      <path d="M14,18 L38,0 L48,0 L20,38 Z" fill="url(#facet-cyan-light)" opacity="0.85"/>
+      <path d="M22,31 L48,50 L48,62 L18,38 Z" fill="url(#facet-violet-pink)" opacity="0.9"/>
+    </g>
+
+    <!-- Letter S -->
+    <g transform="translate(98, 0)">
+      <!-- S top & curve facet -->
+      <path d="M46,16 L46,0 C24,0 4,8 4,22 C4,36 28,37 32,42 C35,46 30,49 24,49 C15,49 8,45 4,40 L4,58 C10,61 17,63 26,63 C46,63 53,52 53,39 C53,26 27,25 24,20 C21,16 26,14 32,14 C38,14 42,15 46,16 Z" fill="url(#facet-cyan-light)"/>
+      <!-- Diagonal slice facet -->
+      <path d="M4,22 L46,0 L53,39 L24,20 Z" fill="url(#facet-violet-pink)" opacity="0.6"/>
+      <path d="M18,34 L40,55 L35,63 L8,42 Z" fill="url(#facet-blue-cyan)" opacity="0.85"/>
+    </g>
+
+    <!-- Letter E -->
+    <g transform="translate(158, 0)">
+      <polygon points="0,0 46,0 46,16 18,16 18,24 42,24 42,38 18,38 18,46 48,46 48,62 0,62" fill="url(#facet-violet-pink)"/>
+      <!-- Facet cuts -->
+      <polygon points="0,0 24,0 0,38" fill="url(#facet-blue-cyan)" opacity="0.7"/>
+      <polygon points="18,24 42,24 30,38 18,38" fill="url(#facet-cyan-light)"/>
+      <polygon points="0,38 48,62 0,62" fill="url(#facet-purple-deep)" opacity="0.85"/>
+      <polygon points="28,46 48,46 48,62 38,62" fill="#ec4899" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- BOTTOM NUMERALS: 2025 -->
+  <g transform="translate(14, 88)">
+    
+    <!-- Numeral 2 -->
+    <g transform="translate(0, 0)">
+      <path d="M44,14 L44,0 C22,0 0,12 0,26 C0,38 12,47 24,53 L44,53 L44,40 L26,40 C18,36 12,31 12,25 C12,17 22,12 32,12 C37,12 41,13 44,14 Z" fill="url(#facet-blue-cyan)"/>
+      <polygon points="0,62 46,62 46,47 0,47" fill="url(#facet-indigo-navy)"/>
+      <polygon points="12,25 44,40 24,53 0,47" fill="url(#facet-purple-deep)" opacity="0.9"/>
+    </g>
+
+    <!-- Numeral 0 -->
+    <g transform="translate(50, 0)">
+      <path d="M26,0 C8,0 0,14 0,31 C0,48 8,62 26,62 C44,62 52,48 52,31 C52,14 44,0 26,0 Z M26,14 C34,14 36,21 36,31 C36,41 34,48 26,48 C18,48 16,41 16,31 C16,21 18,14 26,14 Z" fill="url(#facet-indigo-navy)"/>
+      <!-- Inner facet crystal shards -->
+      <polygon points="26,0 52,31 36,31 26,14" fill="url(#facet-blue-cyan)"/>
+      <polygon points="0,31 26,62 16,31" fill="#3b82f6" opacity="0.8"/>
+      <!-- Glowing white center facet as in original reference -->
+      <polygon points="22,23 30,23 33,38 20,38" fill="url(#facet-light-core)"/>
+    </g>
+
+    <!-- Numeral 2 -->
+    <g transform="translate(108, 0)">
+      <path d="M44,14 L44,0 C22,0 0,12 0,26 C0,38 12,47 24,53 L44,53 L44,40 L26,40 C18,36 12,31 12,25 C12,17 22,12 32,12 C37,12 41,13 44,14 Z" fill="url(#facet-cyan-light)"/>
+      <polygon points="0,62 46,62 46,47 0,47" fill="url(#facet-blue-cyan)"/>
+      <polygon points="12,25 44,40 24,53 0,47" fill="url(#facet-purple-deep)" opacity="0.85"/>
+      <polygon points="20,12 44,0 44,20" fill="#a855f7" opacity="0.75"/>
+    </g>
+
+    <!-- Numeral 5 -->
+    <g transform="translate(160, 0)">
+      <polygon points="0,0 46,0 46,14 16,14 16,24 24,24 C40,24 50,32 50,44 C50,56 38,62 24,62 C14,62 6,58 0,52 L0,36 C6,43 14,48 22,48 C29,48 34,45 34,39 C34,33 29,31 22,31 L0,31" fill="url(#facet-purple-deep)"/>
+      <polygon points="0,0 32,0 16,24 0,24" fill="url(#facet-violet-pink)"/>
+      <polygon points="24,24 50,32 50,44 34,39" fill="url(#facet-blue-cyan)" opacity="0.9"/>
+      <polygon points="0,52 24,62 0,62" fill="#4338ca"/>
+    </g>
+  </g>
+</svg>
