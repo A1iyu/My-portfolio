@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     : '<div class="gallery-empty">Certificate and activity photos will be added here soon.</div>';
 
 
-  const mediaBtn = g => `<button class="story-media" data-idx="${images.indexOf(g)}" aria-label="Open: ${esc(g.title || g.caption || 'media')}"><img src="${esc(g.type === 'video' ? g.poster : (g.thumb || g.src))}" alt="${esc(g.caption || g.title || data.title)}" loading="lazy">${g.type === 'video' ? '<span class="play-badge" aria-hidden="true">&#9654;</span>' : ''}</button>`;
+  const mediaBtn = g => `<button class="story-media" data-idx="${images.indexOf(g)}" aria-label="Open: ${esc(g.title || g.caption || 'media')}"><img src="${esc(g.type === 'video' ? g.poster : (g.thumb || g.src))}" alt="${esc(g.caption || g.title || data.title)}" loading="lazy"${g.fit === 'contain' ? ' class="fit-contain"' : ''}>${g.type === 'video' ? '<span class="play-badge" aria-hidden="true">&#9654;</span>' : ''}</button>`;
   const storyHtml = '<div class="story-list">' + images.map((g, n) => `
     <article class="story${n % 2 ? ' story-flip' : ''}">
       <div class="story-text">
