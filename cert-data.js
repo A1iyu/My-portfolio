@@ -87,47 +87,75 @@ const CERT_DATA = {
       { src: "assets/gallery/iita-yas/yas-field-selfie.jpg", thumb: "assets/gallery/iita-yas/yas-field-selfie-thumb.jpg",
         title: "Into the Field", tagline: "Green coveralls, big smiles",
         caption: "Selfie in green coveralls at the yam seed production site",
-        story: ["Suited up in green coveralls and out at the yam seed production site, with the grow bags lined up behind us. The programme was as hands-on as it gets."] },
+        story: [
+          "Suited up in green coveralls and out at the yam seed production site, with rows of grow bags lined up behind us. The YAS programme was classroom and field in equal parts, and this was the field.",
+          "Yam is not grown from true seeds but from pieces of tuber, so good planting material is scarce and expensive. Seeing a production site laid out with plants in bags rather than on open ridges showed me one way that supply problem can be tackled."] },
       { src: "assets/gallery/iita-yas/yas-yam-vines.jpg", thumb: "assets/gallery/iita-yas/yas-yam-vines-thumb.jpg",
         title: "Yams Reaching Up", tagline: "Where the seed yams grow",
-        caption: "Yam vines growing in bags on stakes",
-        story: ["Yam vines growing in bags and trained up poles. This is the setup used for yam seed production, and a good look at how the crop is grown on a small footprint."] },
+        caption: "Yam vines growing in bags and climbing stakes",
+        story: [
+          "Yam vines growing out of bags and climbing stakes tied together with string lines. Training the vines upward keeps the leaves off the ground and in the light, which supports healthy growth and makes each plant easier to inspect.",
+          "Growing in bags also keeps the setup compact and lets you manage soil, water and pests plant by plant. It is a good example of agribusiness thinking: get more out of a small space."] },
       { src: "assets/gallery/iita-yas/yas-yam-demo.jpg", thumb: "assets/gallery/iita-yas/yas-yam-demo-thumb.jpg",
         title: "Learning the Process", tagline: "A demonstration for the whole group",
         caption: "Group watching a yam seed demonstration",
-        story: ["Everyone gathered around for a hands-on demonstration of how yam is prepared and handled in seed production."] },
+        story: [
+          "A hands-on demonstration with the whole group gathered around, tubers and pans laid out on the table. We watched how yam is prepared and handled before planting, then asked questions.",
+          "Seeing each step done in front of you makes it much easier to understand why it matters for the quality of the planting material, and to try it yourself afterwards."] },
       { src: "assets/gallery/iita-yas/yas-yam-seed-crate.jpg", thumb: "assets/gallery/iita-yas/yas-yam-seed-crate-thumb.jpg",
         title: "Seed Yams", tagline: "The raw material for the next crop",
         caption: "A crate of yam tubers and cut pieces",
-        story: ["A crate of yam tubers and cut pieces, the starting material for planting the next crop."] },
+        story: [
+          "A crate of yam tubers and cut pieces, the starting material for the next crop. Because yam is propagated from pieces of tuber, the size, health and handling of each piece decides how well it sprouts.",
+          "Quality planting material is one of the biggest bottlenecks for yam farmers, which is exactly why seed production is a business opportunity in itself."] },
       { src: "assets/gallery/iita-yas/yas-apiary-group.jpg", thumb: "assets/gallery/iita-yas/yas-apiary-group-thumb.jpg",
         title: "Into the Apiary", tagline: "Learning beekeeping among the trees",
         caption: "The cohort in green coveralls at the apiary",
-        story: ["The cohort in green coveralls gathering in the woodland where the apiary is set up, ready to learn beekeeping first-hand."] },
+        story: [
+          "The cohort in green coveralls gathering in the woodland where the apiary is set up, ready for the beekeeping sessions.",
+          "Beekeeping can be started with modest space and capital, and it adds honey, wax and pollination benefits to a farm, which is why it sat alongside crop production in the programme."] },
       { src: "assets/gallery/iita-yas/yas-bee-suits.jpg", thumb: "assets/gallery/iita-yas/yas-bee-suits-thumb.jpg",
         title: "Suited Up for the Bees", tagline: "Protection comes first",
         caption: "Putting on beekeeping protective suits",
-        story: ["Protective suits, veils and gloves come before anything else when working near a hive. Here the group practises putting them on properly."] },
+        story: [
+          "Protective suits, veils and gloves come before anything else when working near a hive. Here the group practises putting them on while a trainer helps with the fit.",
+          "A small gap at the wrist or neck is enough to let bees in, so checking every fastening matters. Good protection keeps you calm, and calm handling keeps the colony calm."] },
       { src: "assets/gallery/iita-yas/yas-hives-group.jpg", thumb: "assets/gallery/iita-yas/yas-hives-group-thumb.jpg",
         title: "Meeting the Hives", tagline: "The team at the apiary",
         caption: "Group photo at the apiary beside the beehives",
-        story: ["A group photo beside the hives, a nice moment from the apiary training."] },
+        story: [
+          "The group beside the hives, set among the trees on simple benches. A photo that sums up the day at the apiary.",
+          "Hives do best in a quiet, shaded and sheltered spot, which is what this site offered."] },
       { src: "assets/gallery/iita-yas/yas-hive-lid.jpg", thumb: "assets/gallery/iita-yas/yas-hive-lid-thumb.jpg",
         title: "Up Close with a Hive", tagline: "The box where the colony lives",
         caption: "Close-up of a wooden beehive lid",
-        story: ["A close-up of a wooden beehive, the box and lid that give a colony its home and, in time, produce honey."] },
+        story: [
+          "A close-up of a wooden hive: the box and lid that form a colony’s home. The roof keeps rain and sun off the colony while the boxes underneath hold the combs.",
+          "Seeing a hive built from plain wooden boards made beekeeping feel achievable. With basic carpentry and the right know-how, a hive can be built locally."] },
       { src: "assets/gallery/iita-yas/yas-cohort.jpg", thumb: "assets/gallery/iita-yas/yas-cohort-thumb.jpg",
         title: "The Cohort", tagline: "Everyone together at the end",
         caption: "Group photo of the cohort with certificates",
-        story: ["The whole cohort together at the end of the training, certificates in hand."] },
+        story: [
+          "The whole cohort together at the end of the training, certificates in hand, in front of the venue.",
+          "The YAS project, implemented by IITA with its partners, brought people from different backgrounds together to learn how innovative technologies can help scale agribusiness."] },
       { src: "assets/gallery/iita-yas/yas-certificate-day.jpg", thumb: "assets/gallery/iita-yas/yas-certificate-day-thumb.jpg",
         title: "Certificate Day", tagline: "A proud moment",
         caption: "Receiving the certificate",
-        story: ["Collecting my certificate at the end of the programme."] },
-      { src: "assets/gallery/iita-yas/yas-certificate.jpg", thumb: "assets/gallery/iita-yas/yas-certificate-thumb.jpg", fit: "contain",
+        story: [
+          "Collecting my certificate at the end of the programme.",
+          "A proud moment after the classes and field sessions on yam seed production and beekeeping."] },
+      { src: "assets/gallery/iita-yas/yas-certificate.jpg", thumb: "assets/gallery/iita-yas/yas-certificate-thumb.jpg",fit: "contain",
         title: "Certificate of Participation", tagline: "Awarded May 2025",
         caption: "Certificate of Participation, May 2025",
-        story: ["The Certificate of Participation for the agribusiness training organised by the Youth in Agribusiness project, enabling the scaling of innovative technologies for sustainable food solutions. Click the image to read it in full."] }
+        story: [
+          "The Certificate of Participation for the agribusiness training organised by the Youth in Agribusiness project, enabling the scaling of innovative technologies for sustainable food solutions. It is signed by the YAS project’s Executive Manager and Training Coordinator.",
+          "Click the image to read it in full."] },
+      { src: "assets/gallery/iita-yas/yas-broilnest-cert.jpg", thumb: "assets/gallery/iita-yas/yas-broilnest-cert-thumb.jpg",fit: "contain",
+        title: "What Came Next: Broilnest Ventures", tagline: "From training to a registered business",
+        caption: "Certificate of Registration for Broilnest Ventures",
+        story: [
+          "After completing the YAS programme, I took the next step and registered Broilnest Ventures, a farming business, with the Corporate Affairs Commission (CAC).",
+          "The certificate is dated 1 September 2025 and registers the business name under the Companies and Allied Matters Act 2020. It is where the agribusiness training stopped being a course and became something I am building."] }
     ]
   },
   "siyb": {
@@ -137,7 +165,28 @@ const CERT_DATA = {
     logo: "assets/logo_siyb_ilo.png",
     tags: ["Business Planning", "ILO SIYB", "Enterprise"],
     description: "Entrepreneurship training from the ILO Start and Improve Your Business (SIYB) programme, covering business planning and enterprise basics.",
-    gallery: []
+    layout: "story",
+    galleryHeading: "My SIYB Story",
+    gallery: [
+      { src: "assets/gallery/siyb/siyb-group-steps.jpg", thumb: "assets/gallery/siyb/siyb-group-steps-thumb.jpg",
+        title: "Day One at SYB", tagline: "The cohort on the steps",
+        caption: "The SIYB cohort on the steps outside the venue",
+        story: [
+          "The cohort gathered on the steps outside the training venue for a group photo. We came from different backgrounds and with different business ideas, all there to learn how to start a business properly.",
+          "The ILO’s Start and Improve Your Business (SIYB) programme is designed for people at the very beginning of the entrepreneurship journey, helping turn an idea into a plan."] },
+      { src: "assets/gallery/siyb/siyb-classroom.jpg", thumb: "assets/gallery/siyb/siyb-classroom-thumb.jpg",
+        title: "In Class", tagline: "Learning to plan the business",
+        caption: "Facilitator presenting the Start Your Business course",
+        story: [
+          "A facilitator walks the class through a session, with the Start Your Business slides on the projector and workbooks and notes spread across the table.",
+          "The course works through the essentials of starting out, such as testing your business idea, understanding customers and competitors, costing and pricing, and planning your finances, so that you finish with a business plan of your own."] },
+      { src: "assets/gallery/siyb/siyb-workbooks.jpg", thumb: "assets/gallery/siyb/siyb-workbooks-thumb.jpg",
+        title: "Workbooks in Hand", tagline: "The plan starts here",
+        caption: "Participants holding their Start Your Business workbooks",
+        story: [
+          "With our Start Your Business workbooks outside the venue. The workbook is at the heart of the course, and its exercises are completed for your own business idea.",
+          "Working on your own idea as you go makes the course practical rather than theoretical, and gives you something real to take away."] }
+    ]
   },
   "icse": {
     title: "International Conference on Smart Education and Digital Literacy (ICSE)",
