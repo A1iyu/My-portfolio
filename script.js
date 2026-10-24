@@ -344,21 +344,72 @@ function initScrollSpy() {
 
 
 /* ==========================================================================
-   ABOUT ME STORY: attach photos (from about-data.js) to each chapter
+   ABOUT ME: click-to-open winding story path (notes + pictures)
    ========================================================================== */
 function initAboutStory() {
-  if (typeof STORY_PHOTOS === 'undefined') return;
-  document.querySelectorAll('.story-chapter').forEach(ch => {
-    const photos = STORY_PHOTOS[ch.dataset.ch] || [];
-    if (!photos.length) return;
-    const box = ch.querySelector('.chapter-photos');
-    photos.forEach(p => {
-      const img = document.createElement('img');
-      img.src = p.src;
-      img.alt = p.alt || ch.querySelector('.chapter-title').textContent;
-      img.loading = 'lazy';
-      box.appendChild(img);
-    });
-    ch.querySelector('.chapter-body').classList.add('has-photos');
+  const wrap = document.getElementById('about-journey');
+  if (!wrap) return;
+  const toggle = document.getElementById('journey-toggle');
+  const panel = document.getElementById('journey-panel');
+  const track = document.getElementById('journey-track');
+  const svg = document.getElementById('journey-svg');
+  const stops = [...track.querySelectorAll('.stop')];
+
+  // photos (or placeholders)
+  const photosCfg = (typeof STORY_PHOTOS !== 'undefined') ? STORY_PHOTOS : {};
+  const showPh = (typeof SHOW_PHOTO_PLACEHOLDERS === 'undefined') ? true : SHOW_PHOTO_PLACEHOLDERS;
+  stops.forEach(st => {
+    const box = st.querySelector('.stop-photo');
+    const list = photosCfg[st.dataset.ch] || [];
+    const title = st.querySelector('.stop-title').textContent;
+    if (list.length) {
+      list.forEach(ph => {
+        const img = document.createElement('img');
+        img.src = ph.src; img.alt = ph.alt || title; img.loading = 'lazy';
+        img.addEventListener('load', drawPath);
+        box.appendChild(img);
+      });
+    } else if (showPh) {
+      box.innerHTML = '<div class="photo-ph"><span aria-hidden="true">\uD83D\uDCF7</span><small>Photo coming soon</small></div>';
+    } else {
+      st.classList.add('no-photo');
+    }
   });
+
+  function drawPath() {
+    if (window.matchMedia('(max-width: 800px)').matches) { svg.innerHTML = ''; return; }
+    const tr = track.getBoundingClientRect();
+    const W = track.clientWidth, H = track.scrollHeight;
+    const cx = W / 2, amp = 24;
+    const pts = stops.map((st, i) => {
+      const n = st.querySelector('.stop-node').getBoundingClientRect();
+      return { x: cx + (i % 2 ? amp : -amp), y: n.top - tr.top + n.height / 2 };
+    });
+    if (!pts.length) return;
+    let d = `M ${pts[0].x} 0 L ${pts[0].x} ${pts[0].y}`;
+    for (let i = 1; i < pts.length; i++) {
+      const a = pts[i - 1], b = pts[i], m = (a.y + b.y) / 2;
+      d += ` C ${a.x} ${m}, ${b.x} ${m}, ${b.x} ${b.y}`;
+    }
+    const last = pts[pts.length - 1];
+    d += ` L ${last.x} ${H}`;
+    svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+    svg.setAttribute('width', W); svg.setAttribute('height', H);
+    svg.innerHTML = `<defs><linearGradient id="jg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2dd4bf" stop-opacity="0"/><stop offset="0.08" stop-color="#2dd4bf"/><stop offset="0.92" stop-color="#38bdf8"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/></linearGradient></defs>` +
+      `<path d="${d}" fill="none" stroke="url(#jg)" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 9"/>`;
+    // move nodes onto the path
+    stops.forEach((st, i) => { st.style.setProperty('--node-dx', (i % 2 ? amp : -amp) + 'px'); });
+  }
+
+  toggle.addEventListener('click', () => {
+    const open = !wrap.classList.contains('open');
+    wrap.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    if (open) panel.removeAttribute('inert'); else panel.setAttribute('inert', '');
+    toggle.querySelector('.jt-hint').textContent = open ? 'Click to close' : 'Click to open my story';
+    setTimeout(drawPath, 60); setTimeout(drawPath, 520);
+  });
+  window.addEventListener('resize', drawPath);
+  window.addEventListener('load', drawPath);
+  drawPath();
 }

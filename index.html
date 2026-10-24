@@ -210,149 +210,107 @@
     <!-- ABOUT SECTION (EXPANDED TO FILL FULL WIDTH - CONTACT INFO REMOVED AS REQUESTED) -->
     <section class="section about-section" id="about">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">About <span class="text-cyan">Me</span></h2>
-          <div class="section-line"></div>
-        </div>
-
-        <!-- Story-style About: expandable chapters. Add photos in about-data.js -->
-        <div class="about-chips">
-          <div class="strip-item"><span class="strip-icon">🎓</span><span>Computer Science Undergraduate</span></div>
-          <div class="strip-item"><span class="strip-icon">🇳🇬</span><span>Federal Government 3MTT Graduate</span></div>
-          <div class="strip-item"><span class="strip-icon">🛡️</span><span>Cybersecurity via DTA &amp; Coursera</span></div>
-        </div>
-
-        <div class="about-story">
-          <details class="story-chapter" name="about-story" data-ch="1" open>
-            <summary>
-              <span class="chapter-num">01</span>
-              <span class="chapter-head">
-                <span class="chapter-title">Who I Am</span>
-                <span class="chapter-tag">Computer science student, builder, tinkerer</span>
-              </span>
-              <span class="chapter-chevron" aria-hidden="true"></span>
-            </summary>
-            <div class="chapter-body">
-              <div class="chapter-text">
+        <!-- About Me: click the bar to open a winding story path (notes + pictures). Photos: about-data.js -->
+        <div class="about-journey" id="about-journey">
+          <button class="journey-toggle" id="journey-toggle" aria-expanded="false" aria-controls="journey-panel">
+            <span class="jt-title">About <span class="text-cyan">Me</span></span>
+            <span class="chapter-chevron" aria-hidden="true"></span>
+            <span class="jt-hint">Click to open my story</span>
+          </button>
+          <div class="journey-panel" id="journey-panel" inert>
+            <div class="journey-inner">
+              <div class="journey-track" id="journey-track">
+                <svg class="journey-svg" id="journey-svg" aria-hidden="true"></svg>
+          <article class="stop" data-ch="1">
+            <span class="stop-node">01</span>
+            <div class="stop-note">
+              <h3 class="stop-title">Who I Am</h3>
+              <p class="stop-tag">Computer science student, builder, tinkerer</p>
+              <div class="stop-text">
                   <p>I'm a Computer Science undergraduate at NOUN and a <strong>cybersecurity enthusiast</strong> based in Abuja, Nigeria. I build responsive frontend web apps with <strong>JavaScript, HTML5/CSS3 and Git/GitHub</strong>.</p>
                   <p>What ties everything together is hands-on problem solving. Whether it's a bug in code, a fault on a phone or a cable that won't connect, I like finding out why and fixing it.</p>
               </div>
-              <div class="chapter-photos"></div>
             </div>
-          </details>
-          <details class="story-chapter" name="about-story" data-ch="2">
-            <summary>
-              <span class="chapter-num">02</span>
-              <span class="chapter-head">
-                <span class="chapter-title">Where It Started</span>
-                <span class="chapter-tag">Fixing things, one device at a time</span>
-              </span>
-              <span class="chapter-chevron" aria-hidden="true"></span>
-            </summary>
-            <div class="chapter-body">
-              <div class="chapter-text">
+            <div class="stop-photo"></div>
+          </article>
+          <article class="stop" data-ch="2">
+            <span class="stop-node">02</span>
+            <div class="stop-note">
+              <h3 class="stop-title">Where It Started</h3>
+              <p class="stop-tag">Fixing things, one device at a time</p>
+              <div class="stop-text">
                   <p>My first steps in tech were practical. Since January 2021 I've worked part-time in <strong>IT support</strong> at a local cyber café, troubleshooting hardware and software faults on 50+ computers and mobile devices, setting up small office networks and installing Windows and Linux.</p>
                   <p>Around the same time I began practising <strong>GSM device diagnostics and repair</strong>, learning to read faults at component level.</p>
               </div>
-              <div class="chapter-photos"></div>
             </div>
-          </details>
-          <details class="story-chapter" name="about-story" data-ch="3">
-            <summary>
-              <span class="chapter-num">03</span>
-              <span class="chapter-head">
-                <span class="chapter-title">Taking It Freelance</span>
-                <span class="chapter-tag">From the café to my own clients</span>
-              </span>
-              <span class="chapter-chevron" aria-hidden="true"></span>
-            </summary>
-            <div class="chapter-body">
-              <div class="chapter-text">
+            <div class="stop-photo"></div>
+          </article>
+          <article class="stop" data-ch="3">
+            <span class="stop-node">03</span>
+            <div class="stop-note">
+              <h3 class="stop-title">Taking It Freelance</h3>
+              <p class="stop-tag">From the café to my own clients</p>
+              <div class="stop-text">
                   <p>In 2023 I started working for myself as a <strong>freelance tech assistant</strong>: smartphone setups, WhatsApp data migration and hardware faults like dead microphones and connectivity drops, for more than 50 clients.</p>
                   <p>Fast turnaround and clear explanations built a base of repeat clients, and showed me how much good support depends on communication.</p>
               </div>
-              <div class="chapter-photos"></div>
             </div>
-          </details>
-          <details class="story-chapter" name="about-story" data-ch="4">
-            <summary>
-              <span class="chapter-num">04</span>
-              <span class="chapter-head">
-                <span class="chapter-title">Learning to Build</span>
-                <span class="chapter-tag">From fixing software to writing it</span>
-              </span>
-              <span class="chapter-chevron" aria-hidden="true"></span>
-            </summary>
-            <div class="chapter-body">
-              <div class="chapter-text">
+            <div class="stop-photo"></div>
+          </article>
+          <article class="stop" data-ch="4">
+            <span class="stop-node">04</span>
+            <div class="stop-note">
+              <h3 class="stop-title">Learning to Build</h3>
+              <p class="stop-tag">From fixing software to writing it</p>
+              <div class="stop-text">
                   <p>Alongside support work I taught myself to build for the web, and in September 2026 I completed Nigeria's <strong>3MTT Software Development programme</strong>.</p>
                   <p>On Soft-6, an AI-powered interview prep platform, I built the authentication UI, sidebar navigation, profile settings and a Chart.js performance dashboard. I also built my own sales and expense ledger app.</p>
               </div>
-              <div class="chapter-photos"></div>
             </div>
-          </details>
-          <details class="story-chapter" name="about-story" data-ch="5">
-            <summary>
-              <span class="chapter-num">05</span>
-              <span class="chapter-head">
-                <span class="chapter-title">Into the Field</span>
-                <span class="chapter-tag">Hands-on training beyond the screen</span>
-              </span>
-              <span class="chapter-chevron" aria-hidden="true"></span>
-            </summary>
-            <div class="chapter-body">
-              <div class="chapter-text">
+            <div class="stop-photo"></div>
+          </article>
+          <article class="stop" data-ch="5">
+            <span class="stop-node">05</span>
+            <div class="stop-note">
+              <h3 class="stop-title">Into the Field</h3>
+              <p class="stop-tag">Hands-on training beyond the screen</p>
+              <div class="stop-text">
                   <p>Not all my learning happens at a keyboard. I'm training in <strong>electrical work and Solar PV installation</strong> under the FME TVET Initiative at JOBITECH, and I run a personal solar setup.</p>
                   <p>Through the IITA <strong>Youth in Agribusiness</strong> programme I trained in apiary (beekeeping) and yam seed production, and went on to register my own farming business, Broilnest Ventures.</p>
               </div>
-              <div class="chapter-photos"></div>
             </div>
-          </details>
-          <details class="story-chapter" name="about-story" data-ch="6">
-            <summary>
-              <span class="chapter-num">06</span>
-              <span class="chapter-head">
-                <span class="chapter-title">Behind the Scenes</span>
-                <span class="chapter-tag">Keeping an international conference on time</span>
-              </span>
-              <span class="chapter-chevron" aria-hidden="true"></span>
-            </summary>
-            <div class="chapter-body">
-              <div class="chapter-text">
+            <div class="stop-photo"></div>
+          </article>
+          <article class="stop" data-ch="6">
+            <span class="stop-node">06</span>
+            <div class="stop-note">
+              <h3 class="stop-title">Behind the Scenes</h3>
+              <p class="stop-tag">Keeping an international conference on time</p>
+              <div class="stop-text">
                   <p>In May 2025 I volunteered at the <strong>International Conference on Smart Education and Digital Literacy (ICSE)</strong> with the UBEC Digital Resource Center.</p>
                   <p>My job was timekeeping and presentation support: running the on-stage timer so speakers stayed within their slots and projecting slides so sessions ran smoothly. It gave me a front-row view of how a professional event runs.</p>
               </div>
-              <div class="chapter-photos"></div>
             </div>
-          </details>
-          <details class="story-chapter" name="about-story" data-ch="7">
-            <summary>
-              <span class="chapter-num">07</span>
-              <span class="chapter-head">
-                <span class="chapter-title">In the Hospital</span>
-                <span class="chapter-tag">Helping a team adopt a new system</span>
-              </span>
-              <span class="chapter-chevron" aria-hidden="true"></span>
-            </summary>
-            <div class="chapter-body">
-              <div class="chapter-text">
+            <div class="stop-photo"></div>
+          </article>
+          <article class="stop" data-ch="7">
+            <span class="stop-node">07</span>
+            <div class="stop-note">
+              <h3 class="stop-title">In the Hospital</h3>
+              <p class="stop-tag">Helping a team adopt a new system</p>
+              <div class="stop-text">
                   <p>In 2026 I joined the rollout and support team for the <strong>KMC hospital app</strong>, helping staff set up and adopt the new system in their day-to-day workflows.</p>
                   <p>I logged, triaged and resolved user issues, escalated complex faults to the developers, and documented recurring problems and fixes to make onboarding faster.</p>
               </div>
-              <div class="chapter-photos"></div>
             </div>
-          </details>
-          <details class="story-chapter" name="about-story" data-ch="8">
-            <summary>
-              <span class="chapter-num">08</span>
-              <span class="chapter-head">
-                <span class="chapter-title">Me Outside Work</span>
-                <span class="chapter-tag">Hobbies and likes</span>
-              </span>
-              <span class="chapter-chevron" aria-hidden="true"></span>
-            </summary>
-            <div class="chapter-body">
-              <div class="chapter-text">
+            <div class="stop-photo"></div>
+          </article>
+          <article class="stop" data-ch="8">
+            <span class="stop-node">08</span>
+            <div class="stop-note">
+              <h3 class="stop-title">Me Outside Work</h3>
+              <p class="stop-tag">Hobbies and likes</p>
+              <div class="stop-text">
                   <p>When I'm not working or studying, you'll usually find me gaming, watching anime or catching a movie.</p>
                   <p>Games like <strong>Halo</strong> and <strong>Call of Duty</strong> are favourites, and I enjoy <strong>anime</strong> and <strong>movies</strong> as a way to switch off.</p>
                 <div class="chapter-pills">
@@ -362,26 +320,30 @@
                   <span class="pill">🎬 Movies</span>
                 </div>
               </div>
-              <div class="chapter-photos"></div>
             </div>
-          </details>
-          <details class="story-chapter" name="about-story" data-ch="9">
-            <summary>
-              <span class="chapter-num">09</span>
-              <span class="chapter-head">
-                <span class="chapter-title">Where I'm Headed</span>
-                <span class="chapter-tag">Deepening security, open to what's next</span>
-              </span>
-              <span class="chapter-chevron" aria-hidden="true"></span>
-            </summary>
-            <div class="chapter-body">
-              <div class="chapter-text">
+            <div class="stop-photo"></div>
+          </article>
+          <article class="stop" data-ch="9">
+            <span class="stop-node">09</span>
+            <div class="stop-note">
+              <h3 class="stop-title">Where I'm Headed</h3>
+              <p class="stop-tag">Deepening security, open to what's next</p>
+              <div class="stop-text">
                   <p>I'm now deepening my <strong>cybersecurity</strong> skills through the Digital Training Academy (DTA) and Coursera, focusing on defensive security, system hardening and secure computing.</p>
                   <p>I'm open to frontend, IT support and hybrid roles, and to anything that lets me keep building, fixing and learning.</p>
               </div>
-              <div class="chapter-photos"></div>
             </div>
-          </details>
+            <div class="stop-photo"></div>
+          </article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-chips">
+          <div class="strip-item"><span class="strip-icon">🎓</span><span>Computer Science Undergraduate</span></div>
+          <div class="strip-item"><span class="strip-icon">🇳🇬</span><span>Federal Government 3MTT Graduate</span></div>
+          <div class="strip-item"><span class="strip-icon">🛡️</span><span>Cybersecurity via DTA &amp; Coursera</span></div>
         </div>
 
         <!-- 4 Wide Core Technical Pillars Spanning the Full Width -->

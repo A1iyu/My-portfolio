@@ -21,3 +21,6 @@ const STORY_PHOTOS = {
   8: [],
   9: []
 };
+
+// Show a soft "Photo coming soon" frame on stops that have no photo yet (set to false to hide them)
+const SHOW_PHOTO_PLACEHOLDERS = true;
