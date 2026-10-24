@@ -2409,3 +2409,86 @@ a.cert-card:focus-visible {
 .hub-alt { margin-top: 0.6rem; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-dim); }
 .hub-alt a { color: var(--accent-teal); text-decoration: none; }
 .hub-alt a:hover { text-decoration: underline; }
+
+/* ==========================================================================
+   ABOUT ME: STORY ACCORDION
+   ========================================================================== */
+.about-chips { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-bottom: 1.5rem; }
+.about-story { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
+
+.story-chapter {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color var(--transition-normal);
+}
+.story-chapter:hover { border-color: rgba(45, 212, 191, 0.25); }
+.story-chapter[open] { border-color: rgba(45, 212, 191, 0.4); }
+
+.story-chapter summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.1rem 1.4rem;
+  transition: background var(--transition-fast);
+}
+.story-chapter summary::-webkit-details-marker { display: none; }
+.story-chapter summary:hover { background: rgba(255, 255, 255, 0.025); }
+.story-chapter summary:focus-visible { outline: 2px solid var(--accent-teal); outline-offset: -2px; }
+
+.chapter-num { font-family: var(--font-mono); font-size: 0.85rem; font-weight: 700; color: var(--accent-teal); }
+.chapter-head { flex: 1; display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+.chapter-title { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: #fff; }
+.chapter-tag { font-style: italic; font-size: 0.9rem; color: var(--text-dim); }
+
+.chapter-chevron {
+  width: 9px; height: 9px;
+  border-right: 2px solid var(--accent-teal);
+  border-bottom: 2px solid var(--accent-teal);
+  transform: rotate(45deg);
+  margin: -4px 0.4rem 0 0;
+  transition: transform var(--transition-normal);
+  flex-shrink: 0;
+}
+.story-chapter[open] .chapter-chevron { transform: rotate(-135deg); margin-top: 4px; }
+
+.chapter-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.75rem;
+  padding: 0.25rem 1.4rem 1.6rem 3.6rem;
+  animation: chapter-open 0.35s ease;
+}
+.chapter-body.has-photos { grid-template-columns: minmax(0, 1fr) minmax(0, 320px); }
+@keyframes chapter-open { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+.chapter-text p { color: var(--text-muted); line-height: 1.85; font-size: 1.02rem; max-width: 64ch; margin-bottom: 1rem; }
+.chapter-text p:last-child { margin-bottom: 0; }
+.chapter-text strong { color: #fff; font-weight: 600; }
+
+.chapter-photos { display: flex; flex-direction: column; gap: 1rem; }
+.chapter-photos:empty { display: none; }
+.chapter-photos img {
+  width: 100%; height: auto; max-height: 420px; object-fit: cover; object-position: center 20%;
+  border-radius: 12px; border: 1px solid var(--border-subtle);
+  box-shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 800px) {
+  .chapter-body, .chapter-body.has-photos { grid-template-columns: 1fr; padding-left: 1.4rem; }
+  .story-chapter summary { padding: 1rem 1.1rem; }
+}
+@media (prefers-reduced-motion: reduce) { .chapter-body { animation: none; } }
+
+.chapter-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.25rem; }
+.chapter-pills .pill {
+  padding: 0.4rem 0.95rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(45, 212, 191, 0.35);
+  background: rgba(45, 212, 191, 0.07);
+  color: var(--text-main);
+  font-size: 0.88rem;
+}

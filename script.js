@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initClipboard();
   initLiveClock();
   initScrollSpy();
+  initAboutStory();
 });
 
 /* ==========================================================================
@@ -338,5 +339,26 @@ function initScrollSpy() {
         link.classList.add('active');
       }
     });
+  });
+}
+
+
+/* ==========================================================================
+   ABOUT ME STORY: attach photos (from about-data.js) to each chapter
+   ========================================================================== */
+function initAboutStory() {
+  if (typeof STORY_PHOTOS === 'undefined') return;
+  document.querySelectorAll('.story-chapter').forEach(ch => {
+    const photos = STORY_PHOTOS[ch.dataset.ch] || [];
+    if (!photos.length) return;
+    const box = ch.querySelector('.chapter-photos');
+    photos.forEach(p => {
+      const img = document.createElement('img');
+      img.src = p.src;
+      img.alt = p.alt || ch.querySelector('.chapter-title').textContent;
+      img.loading = 'lazy';
+      box.appendChild(img);
+    });
+    ch.querySelector('.chapter-body').classList.add('has-photos');
   });
 }
