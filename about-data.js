@@ -1,14 +1,14 @@
 /**
  * ABOUT ME STORY: PHOTOS
  * Drop your pictures into assets/story/ and list them under the chapter number.
- * A chapter with no photos simply shows its text. A chapter with photos shows them beside the text.
+ * Each chapter's photo box shows your photo beside the text.
  *
- * Chapters: 1 Who I Am, 2 Where It Started, 3 Taking It Freelance, 4 Learning to Build,
- *           5 Into the Field, 6 Behind the Scenes, 7 In the Hospital, 8 Me Outside Work,
- *           9 Where I'm Headed
+ * Chapters: 1 Where Curiosity Met Creativity, 2 When the Plan Changed, 3 A Different Route, New Possibilities,
+ *           4 Finding My Way into Software Development, 5 From Building Software to Securing It,
+ *           6 Me Outside School and Work
  *
  * Example:
- *   2: [ { src: "assets/story/cafe.jpg", alt: "At the cyber caf\u00E9" } ],
+ *   1: [ { src: "assets/story/childhood.jpg", alt: "Building things as a kid" } ],
  */
 const STORY_PHOTOS = {
   1: [],
@@ -16,10 +16,7 @@ const STORY_PHOTOS = {
   3: [],
   4: [],
   5: [],
-  6: [],
-  7: [],
-  8: [],
-  9: []
+  6: []
 };
 
 // Show a soft "Photo coming soon" frame on stops that have no photo yet (set to false to hide them)

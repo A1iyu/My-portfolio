@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.title = data.title + ' | Aliyu Mustapha';
   const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
-  const images = data.gallery.filter(g => g.type !== 'pdf');
+  const mainItems = data.gallery.filter(g => g.type !== 'pdf');
+  const images = mainItems.flatMap(g => [g, ...(g.more || [])]);
   const gridHtml = data.gallery.length
     ? '<div class="gallery-grid">' + data.gallery.map(g => g.type === 'pdf'
         ? `<a class="gallery-item pdf-item" href="${esc(g.src)}" target="_blank" rel="noopener"><div class="gallery-caption">📄 ${esc(g.caption || 'Open PDF')}</div></a>`
@@ -29,16 +30,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const mediaBtn = g => `<button class="story-media" data-idx="${images.indexOf(g)}" aria-label="Open: ${esc(g.title || g.caption || 'media')}"><img src="${esc(g.type === 'video' ? g.poster : (g.thumb || g.src))}" alt="${esc(g.caption || g.title || data.title)}" loading="lazy"${g.fit === 'contain' ? ' class="fit-contain"' : ''}>${g.type === 'video' ? '<span class="play-badge" aria-hidden="true">&#9654;</span>' : ''}</button>`;
-  const storyHtml = '<div class="story-list">' + images.map((g, n) => `
+  const storyHtml = '<div class="story-list">' + mainItems.map((g, n) => `
+    ${g.group ? `<h3 class="story-group">${esc(g.group)}</h3>` : ''}
     <article class="story${n % 2 ? ' story-flip' : ''}">
       <div class="story-text">
-        <span class="story-num">${String(n + 1).padStart(2, '0')}${g.date ? ' &middot; ' + esc(g.date) : ''}</span>
         <h3 class="story-title">${esc(g.title || g.caption || '')}</h3>
         ${g.tagline ? `<p class="story-tagline">${esc(g.tagline)}</p>` : ''}
-        ${(g.story || []).map(t => `<p>${esc(t)}</p>`).join('')}
+        ${(g.story || []).map(x => `<p>${esc(x)}</p>`).join('')}
       </div>
-      ${mediaBtn(g)}
+      <div class="story-media-col">${[g, ...(g.more || [])].map(mediaBtn).join('')}</div>
     </article>`).join('') + '</div>' +
+    (data.outro ? `<div class="story-outro"><h3 class="story-title">${esc(data.outro.title)}</h3>${data.outro.tagline ? `<p class="story-tagline">${esc(data.outro.tagline)}</p>` : ''}${(data.outro.text || []).map(x => `<p>${esc(x)}</p>`).join('')}</div>` : '') +
     data.gallery.filter(g => g.type === 'pdf').map(g => `<a class="gallery-item pdf-item" href="${esc(g.src)}" target="_blank" rel="noopener" style="margin-top:2rem"><div class="gallery-caption">&#128196; ${esc(g.caption || 'Open PDF')}</div></a>`).join('');
   const galleryHtml = data.layout === 'story' ? storyHtml : gridHtml;
 
@@ -56,8 +58,12 @@ document.addEventListener('DOMContentLoaded', () => {
         ${data.verifyUrl ? `<a class="btn btn-sm btn-outline-teal verify-btn" href="${esc(data.verifyUrl)}" target="_blank" rel="noopener noreferrer">Verify this credential</a>` : ''}
       </div>
     </section>
-    <h2 class="gallery-heading">${esc(data.galleryHeading || 'Certificates & Activity Photos')}</h2>
+    ${data.intro
+      ? `<div class="story-intro"><h2 class="gallery-heading">${esc(data.intro.title)}</h2>${data.intro.tagline ? `<p class="story-tagline">${esc(data.intro.tagline)}</p>` : ''}${(data.intro.text || []).map(x => `<p>${esc(x)}</p>`).join('')}</div>`
+      : `<h2 class="gallery-heading">${esc(data.galleryHeading || 'Certificates & Activity Photos')}</h2>`}
     ${galleryHtml}`;
+
+  if (window.initReveal) window.initReveal();
 
   // Lightbox
   const lb = document.getElementById('lightbox');

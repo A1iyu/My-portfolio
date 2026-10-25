@@ -1,205 +1,396 @@
 /**
  * CERTIFICATE / PROGRAMME DETAILS
- * To add photos: drop the image into assets/gallery/<id>/ and add a line to that
- * entry's "gallery" list below, e.g.
- *   { src: "assets/gallery/icse/team.jpg", caption: "With the ICSE team" }
- * Use "type: 'pdf'" for a PDF certificate to open it in a new tab, "fit: 'contain'" to show
- * a wide image (like a certificate) without cropping, "verifyUrl" for a verification link, and
- * "type: 'video'" with src + poster for a video (it plays in the viewer). Optional "thumb" = smaller preview image.
+ * To add photos: drop the image into assets/gallery/<id>/ and add an entry to that programme's "gallery" list.
+ *
+ * Plain grid entries:   { src, thumb?, caption, fit?: "contain" | type: "pdf" | type: "video" + poster }
+ * Story layout ("layout: 'story'") entries also take:
+ *   title, tagline, story: ["paragraph", ...],
+ *   group: "Heading shown above this story",
+ *   more:  [ extra photos/videos shown under the main one ]
+ * And the programme can have:
+ *   intro: { title, tagline, text: [...] }   (shown above the stories)
+ *   outro: { title, tagline, text: [...] }   (shown after the stories)
+ *   verifyUrl: link to verify the credential
  */
 const CERT_DATA = {
   "dta": {
-    title: "Cybersecurity",
-    issuer: "Digital Training Academy (DTA) and Coursera",
-    badge: "In progress", badgeClass: "badge-in-progress",
-    logo: "assets/logo_dta.png",
-    tags: ["Threat Analysis", "Defense", "Coursera"],
-    description: "Cybersecurity training delivered through the Digital Training Academy (DTA) alongside Coursera courses. Currently in progress.",
-    gallery: []
+    "title": "Cybersecurity",
+    "issuer": "Digital Training Academy (DTA) and Coursera",
+    "badge": "In progress",
+    "badgeClass": "badge-in-progress",
+    "logo": "assets/logo_dta.png",
+    "tags": [
+      "Threat Analysis",
+      "Defense",
+      "Coursera"
+    ],
+    "description": "Cybersecurity training delivered through the Digital Training Academy (DTA) alongside Coursera courses. Currently in progress.",
+    "gallery": []
   },
   "tvet": {
-    title: "Electrical and Solar PV installation and maintenance",
-    issuer: "FME TVET Initiative · John Bosco Institute of Technology Nigeria (JOBITECH)",
-    badge: "In progress", badgeClass: "badge-in-progress",
-    logo: "assets/logo_tvet_jobitech.png",
-    tags: ["Solar PV", "Electrical", "JOBITECH"],
-    description: "Hands-on technical training in electrical work and solar PV installation and maintenance under the FME TVET Initiative. Currently in progress.",
-    layout: "story",
-    galleryHeading: "My TVET Story",
-    gallery: [
-      { src: "assets/gallery/tvet/tvet-workshop-selfie.jpg", thumb: "assets/gallery/tvet/tvet-workshop-selfie-thumb.jpg",
-        title: "Day One Energy", tagline: "Starting the day in the workshop with my classmates",
-        caption: "Selfie with classmates in the workshop",
-        story: ["Hard hats on, coveralls zipped up, and a quick selfie before the practical started. The electrical workshop is where this programme stops being theory and starts being something you do with your hands."] },
-      { src: "assets/gallery/tvet/tvet-group-photo.jpg", thumb: "assets/gallery/tvet/tvet-group-photo-thumb.jpg",
-        title: "The Crew", tagline: "Still full of energy",
-        caption: "Group photo in coveralls and hard hats",
-        story: ["Still just having fun at the workshop, and still full of energy, here with some of the crew."] },
-      { src: "assets/gallery/tvet/tvet-wiring-practice.jpg", thumb: "assets/gallery/tvet/tvet-wiring-practice-thumb.jpg",
-        title: "Hands on the Wiring", tagline: "Where the practice happens",
-        caption: "Wiring practice at the electrical training board",
-        story: ["At the training board, we practised installing and connecting electrical components. Slow, careful, step-by-step work is how the basics become habits."] },
-      { src: "assets/gallery/tvet/tvet-training-board.jpg", thumb: "assets/gallery/tvet/tvet-training-board-thumb.jpg",
-        title: "A Job Well Done", tagline: "Selfie in front of the finished work",
-        caption: "Selfie in front of a finished job at the training board",
-        story: ["The wiring was done, so I took a quick selfie in front of the finished job. There is a good feeling in seeing something you installed yourself come together."] },
-      { type: "video", src: "assets/gallery/tvet/tvet-video-1.mp4", poster: "assets/gallery/tvet/tvet-video-1-poster.jpg",
-        title: "Learning the Tools", tagline: "Practical skills beyond the board",
-        caption: "Practical session: working on a wall with a power tool",
-        story: ["Not everything in the programme happens at a desk. In this practical session I got hands-on with a power tool, working on a wall the way an installer would."] },
-      { src: "assets/gallery/tvet/tvet-solar-roof.jpg", thumb: "assets/gallery/tvet/tvet-solar-roof-thumb.jpg",
-        title: "Up on the Roof", tagline: "From the workshop to the real thing",
-        caption: "Solar panel installation on the roof",
-        story: ["The Solar PV part of the programme took us out of the workshop and onto a roof. Planning, safety and teamwork all have to come together up here."] },
-      { type: "video", src: "assets/gallery/tvet/tvet-video-2.mp4", poster: "assets/gallery/tvet/tvet-video-2-poster.jpg",
-        title: "Panels Going Up", tagline: "It takes a team to lift a panel",
-        caption: "Solar panels going up to the roof",
-        story: ["Getting solar panels from the ground to the roof is a team job: someone on the ladder, someone guiding from below, everyone watching the weight and the edge."] },
-      { type: "video", src: "assets/gallery/tvet/tvet-video-3.mp4", poster: "assets/gallery/tvet/tvet-video-3-poster.jpg",
-        title: "Fixing It in Place", tagline: "The final stretch on the roof",
-        caption: "Working on the roof during the solar installation",
-        story: ["Once the panels are up, they have to be secured properly. A close-up of the work on the roof, where every fixing matters."] }
-    ]
+    "title": "Electrical and Solar PV installation and maintenance",
+    "issuer": "FME TVET Initiative · John Bosco Institute of Technology Nigeria (JOBITECH)",
+    "badge": "In progress",
+    "badgeClass": "badge-in-progress",
+    "logo": "assets/logo_tvet_jobitech.png",
+    "tags": [
+      "Solar PV",
+      "Electrical",
+      "JOBITECH"
+    ],
+    "description": "Hands-on technical training in electrical work and solar PV installation and maintenance under the FME TVET Initiative. Currently in progress.",
+    "layout": "story",
+    "gallery": [
+      {
+        "src": "assets/gallery/tvet/tvet-workshop-selfie.jpg",
+        "thumb": "assets/gallery/tvet/tvet-workshop-selfie-thumb.jpg",
+        "title": "Before the Work Begins",
+        "tagline": "Every practical session starts somewhere.",
+        "caption": "Before the Work Begins",
+        "story": [
+          "Hard hats on, coveralls zipped up, and a quick selfie with my classmates before getting started. A little moment before the tools came out and the real work began."
+        ]
+      },
+      {
+        "src": "assets/gallery/tvet/tvet-group-photo.jpg",
+        "thumb": "assets/gallery/tvet/tvet-group-photo-thumb.jpg",
+        "title": "Good Company, Good Energy",
+        "tagline": "Learning is better with a team.",
+        "caption": "Good Company, Good Energy",
+        "story": [
+          "The workshop wasn’t just about the technical skills. It was also about learning alongside people, sharing the experience, and making memories along the way."
+        ]
+      },
+      {
+        "src": "assets/gallery/tvet/tvet-wiring-practice.jpg",
+        "thumb": "assets/gallery/tvet/tvet-wiring-practice-thumb.jpg",
+        "title": "Connecting the Pieces",
+        "tagline": "Learning the work, one connection at a time.",
+        "caption": "Connecting the Pieces",
+        "story": [
+          "At the training board, we practised installing and connecting electrical components. Each step required attention and care, reminding me that getting the basics right is what makes the bigger picture work."
+        ]
+      },
+      {
+        "src": "assets/gallery/tvet/tvet-training-board.jpg",
+        "thumb": "assets/gallery/tvet/tvet-training-board-thumb.jpg",
+        "title": "Seeing the Work Come Together",
+        "tagline": "There’s a difference between learning a process and seeing the result.",
+        "caption": "Seeing the Work Come Together",
+        "story": [
+          "With the wiring completed, I took a moment to appreciate the finished work. It’s satisfying to see the individual connections come together into something you can actually point to and say, \"I worked on that.\""
+        ]
+      },
+      {
+        "type": "video",
+        "src": "assets/gallery/tvet/tvet-video-1.mp4",
+        "poster": "assets/gallery/tvet/tvet-video-1-poster.jpg",
+        "title": "Beyond the Training Board",
+        "tagline": "Getting comfortable with the tools of the trade.",
+        "caption": "Beyond the Training Board",
+        "story": [
+          "Practical training means learning to work with the tools involved, not just understanding the theory. This session gave me another opportunity to build familiarity with the equipment used in installation work."
+        ]
+      },
+      {
+        "src": "assets/gallery/tvet/tvet-solar-roof.jpg",
+        "thumb": "assets/gallery/tvet/tvet-solar-roof-thumb.jpg",
+        "title": "Taking It to the Roof",
+        "tagline": "From the workshop to a real installation setting.",
+        "caption": "Taking It to the Roof",
+        "story": [
+          "The solar PV sessions took us onto the roof, where the work introduced another set of considerations. Working at height called for attention to safety, coordination, and how each stage of the installation fitted into the next."
+        ]
+      },
+      {
+        "type": "video",
+        "src": "assets/gallery/tvet/tvet-video-2.mp4",
+        "poster": "assets/gallery/tvet/tvet-video-2-poster.jpg",
+        "title": "Getting the Panels into Position",
+        "tagline": "Some jobs are better done together.",
+        "caption": "Getting the Panels into Position",
+        "story": [
+          "Moving solar panels onto the roof required teamwork and coordination. Everyone had a part to play, from guiding the panels to handling them carefully as they were lifted into position."
+        ]
+      },
+      {
+        "type": "video",
+        "src": "assets/gallery/tvet/tvet-video-3.mp4",
+        "poster": "assets/gallery/tvet/tvet-video-3-poster.jpg",
+        "title": "Securing the Installation",
+        "tagline": "The details matter just as much as the big picture.",
+        "caption": "Securing the Installation",
+        "story": [
+          "With the panels in position, the next step was securing them properly. It was a reminder that an installation isn’t just about getting everything into place; the details and the way each component is fixed matter too."
+        ]
+      }
+    ],
+    "intro": {
+      "title": "TVET: Electrical and Solar Installation",
+      "tagline": "Learning by doing, one connection at a time.",
+      "text": [
+        "Some skills make more sense when you get your hands on them. Through the TVET programme, I began exploring electrical installation and solar PV through practical sessions, working with tools, connecting components, and learning alongside my classmates. It was an opportunity to move beyond what I could learn from a screen and experience the work firsthand."
+      ]
+    },
+    "outro": {
+      "title": "More Than a Training Certificate",
+      "tagline": "Building skills I can continue to develop.",
+      "text": [
+        "This programme gave me an opportunity to explore a practical field beyond my usual computer-based work. I’m still learning, but every hands-on experience adds something new to what I know and what I can work towards next."
+      ]
+    }
   },
   "3mtt": {
-    title: "Software Development Programme",
-    issuer: "3 Million Technical Talent (3MTT), Federal Government of Nigeria",
-    badge: "Sep 2026", badgeClass: "badge-date",
-    logo: "assets/logo_3mtt.png",
-    tags: ["Frontend", "JavaScript", "Federal Govt"],
-    description: "Completed the Software Development course under the Federal Government's 3MTT Initiative on 5 September 2026. The programme focused on frontend development with HTML, CSS, JavaScript and Git/GitHub workflows.",
-    verifyUrl: "https://app.3mtt.training/verify?id=FE/23/23077464",
-    gallery: [
-      { src: "assets/gallery/3mtt/certificate.png", caption: "Certificate of Completion, 5 September 2026", fit: "contain" },
-      { src: "assets/gallery/3mtt/3mtt-software-development-certificate.pdf", caption: "Download certificate (PDF)", type: "pdf" }
+    "title": "Software Development Programme",
+    "issuer": "3 Million Technical Talent (3MTT), Federal Government of Nigeria",
+    "badge": "Sep 2026",
+    "badgeClass": "badge-date",
+    "logo": "assets/logo_3mtt.png",
+    "tags": [
+      "Frontend",
+      "JavaScript",
+      "Federal Govt"
+    ],
+    "description": "Completed the Software Development course under the Federal Government's 3MTT Initiative on 5 September 2026. The programme focused on frontend development with HTML, CSS, JavaScript and Git/GitHub workflows.",
+    "verifyUrl": "https://app.3mtt.training/verify?id=FE/23/23077464",
+    "gallery": [
+      {
+        "src": "assets/gallery/3mtt/certificate.png",
+        "caption": "Certificate of Completion, 5 September 2026",
+        "fit": "contain"
+      },
+      {
+        "src": "assets/gallery/3mtt/3mtt-software-development-certificate.pdf",
+        "caption": "Download certificate (PDF)",
+        "type": "pdf"
+      }
     ]
   },
   "iita-yas": {
-    title: "Youth in Agribusiness Programme",
-    issuer: "International Institute of Tropical Agriculture (IITA YAS)",
-    badge: "May 2025", badgeClass: "badge-date",
-    logo: "assets/logo_iita_yas.png",
-    tags: ["Agribusiness Tech", "IITA", "CGIAR"],
-    description: "Youth in Agribusiness programme run by IITA, with hands-on training in apiary (beekeeping) and yam seed production.",
-    layout: "story",
-    galleryHeading: "My IITA YAS Story",
-    gallery: [
-      { src: "assets/gallery/iita-yas/yas-field-selfie.jpg", thumb: "assets/gallery/iita-yas/yas-field-selfie-thumb.jpg",
-        title: "Into the Field", tagline: "Green coveralls, big smiles",
-        caption: "Selfie in green coveralls at the yam seed production site",
-        story: [
-          "Suited up in green coveralls and out at the yam seed production site, with rows of grow bags lined up behind us. The YAS programme was classroom and field in equal parts, and this was the field.",
-          "Yam is not grown from true seeds but from pieces of tuber, so good planting material is scarce and expensive. Seeing a production site laid out with plants in bags rather than on open ridges showed me one way that supply problem can be tackled."] },
-      { src: "assets/gallery/iita-yas/yas-yam-vines.jpg", thumb: "assets/gallery/iita-yas/yas-yam-vines-thumb.jpg",
-        title: "Yams Reaching Up", tagline: "Where the seed yams grow",
-        caption: "Yam vines growing in bags and climbing stakes",
-        story: [
-          "Yam vines growing out of bags and climbing stakes tied together with string lines. Training the vines upward keeps the leaves off the ground and in the light, which supports healthy growth and makes each plant easier to inspect.",
-          "Growing in bags also keeps the setup compact and lets you manage soil, water and pests plant by plant. It is a good example of agribusiness thinking: get more out of a small space."] },
-      { src: "assets/gallery/iita-yas/yas-yam-demo.jpg", thumb: "assets/gallery/iita-yas/yas-yam-demo-thumb.jpg",
-        title: "Learning the Process", tagline: "A demonstration for the whole group",
-        caption: "Group watching a yam seed demonstration",
-        story: [
-          "A hands-on demonstration with the whole group gathered around, tubers and pans laid out on the table. We watched how yam is prepared and handled before planting, then asked questions.",
-          "Seeing each step done in front of you makes it much easier to understand why it matters for the quality of the planting material, and to try it yourself afterwards."] },
-      { src: "assets/gallery/iita-yas/yas-yam-seed-crate.jpg", thumb: "assets/gallery/iita-yas/yas-yam-seed-crate-thumb.jpg",
-        title: "Seed Yams", tagline: "The raw material for the next crop",
-        caption: "A crate of yam tubers and cut pieces",
-        story: [
-          "A crate of yam tubers and cut pieces, the starting material for the next crop. Because yam is propagated from pieces of tuber, the size, health and handling of each piece decides how well it sprouts.",
-          "Quality planting material is one of the biggest bottlenecks for yam farmers, which is exactly why seed production is a business opportunity in itself."] },
-      { src: "assets/gallery/iita-yas/yas-apiary-group.jpg", thumb: "assets/gallery/iita-yas/yas-apiary-group-thumb.jpg",
-        title: "Into the Apiary", tagline: "Learning beekeeping among the trees",
-        caption: "The cohort in green coveralls at the apiary",
-        story: [
-          "The cohort in green coveralls gathering in the woodland where the apiary is set up, ready for the beekeeping sessions.",
-          "Beekeeping can be started with modest space and capital, and it adds honey, wax and pollination benefits to a farm, which is why it sat alongside crop production in the programme."] },
-      { src: "assets/gallery/iita-yas/yas-bee-suits.jpg", thumb: "assets/gallery/iita-yas/yas-bee-suits-thumb.jpg",
-        title: "Suited Up for the Bees", tagline: "Protection comes first",
-        caption: "Putting on beekeeping protective suits",
-        story: [
-          "Protective suits, veils and gloves come before anything else when working near a hive. Here the group practises putting them on while a trainer helps with the fit.",
-          "A small gap at the wrist or neck is enough to let bees in, so checking every fastening matters. Good protection keeps you calm, and calm handling keeps the colony calm."] },
-      { src: "assets/gallery/iita-yas/yas-hives-group.jpg", thumb: "assets/gallery/iita-yas/yas-hives-group-thumb.jpg",
-        title: "Meeting the Hives", tagline: "The team at the apiary",
-        caption: "Group photo at the apiary beside the beehives",
-        story: [
-          "The group beside the hives, set among the trees on simple benches. A photo that sums up the day at the apiary.",
-          "Hives do best in a quiet, shaded and sheltered spot, which is what this site offered."] },
-      { src: "assets/gallery/iita-yas/yas-hive-lid.jpg", thumb: "assets/gallery/iita-yas/yas-hive-lid-thumb.jpg",
-        title: "Up Close with a Hive", tagline: "The box where the colony lives",
-        caption: "Close-up of a wooden beehive lid",
-        story: [
-          "A close-up of a wooden hive: the box and lid that form a colony’s home. The roof keeps rain and sun off the colony while the boxes underneath hold the combs.",
-          "Seeing a hive built from plain wooden boards made beekeeping feel achievable. With basic carpentry and the right know-how, a hive can be built locally."] },
-      { src: "assets/gallery/iita-yas/yas-cohort.jpg", thumb: "assets/gallery/iita-yas/yas-cohort-thumb.jpg",
-        title: "The Cohort", tagline: "Everyone together at the end",
-        caption: "Group photo of the cohort with certificates",
-        story: [
-          "The whole cohort together at the end of the training, certificates in hand, in front of the venue.",
-          "The YAS project, implemented by IITA with its partners, brought people from different backgrounds together to learn how innovative technologies can help scale agribusiness."] },
-      { src: "assets/gallery/iita-yas/yas-certificate-day.jpg", thumb: "assets/gallery/iita-yas/yas-certificate-day-thumb.jpg",
-        title: "Certificate Day", tagline: "A proud moment",
-        caption: "Receiving the certificate",
-        story: [
-          "Collecting my certificate at the end of the programme.",
-          "A proud moment after the classes and field sessions on yam seed production and beekeeping."] },
-      { src: "assets/gallery/iita-yas/yas-certificate.jpg", thumb: "assets/gallery/iita-yas/yas-certificate-thumb.jpg",fit: "contain",
-        title: "Certificate of Participation", tagline: "Awarded May 2025",
-        caption: "Certificate of Participation, May 2025",
-        story: [
-          "The Certificate of Participation for the agribusiness training organised by the Youth in Agribusiness project, enabling the scaling of innovative technologies for sustainable food solutions. It is signed by the YAS project’s Executive Manager and Training Coordinator.",
-          "Click the image to read it in full."] },
-      { src: "assets/gallery/iita-yas/yas-broilnest-cert.jpg", thumb: "assets/gallery/iita-yas/yas-broilnest-cert-thumb.jpg",fit: "contain",
-        title: "What Came Next: Broilnest Ventures", tagline: "From training to a registered business",
-        caption: "Certificate of Registration for Broilnest Ventures",
-        story: [
-          "After completing the YAS programme, I took the next step and registered Broilnest Ventures, a farming business, with the Corporate Affairs Commission (CAC).",
-          "The certificate is dated 1 September 2025 and registers the business name under the Companies and Allied Matters Act 2020. It is where the agribusiness training stopped being a course and became something I am building."] }
-    ]
+    "title": "Youth in Agribusiness Programme",
+    "issuer": "International Institute of Tropical Agriculture (IITA YAS)",
+    "badge": "May 2025",
+    "badgeClass": "badge-date",
+    "logo": "assets/logo_iita_yas.png",
+    "tags": [
+      "Agribusiness Tech",
+      "IITA",
+      "CGIAR"
+    ],
+    "description": "Youth in Agribusiness programme run by IITA, with hands-on training in apiary (beekeeping) and yam seed production.",
+    "layout": "story",
+    "gallery": [
+      {
+        "src": "assets/gallery/iita-yas/yas-field-selfie.jpg",
+        "thumb": "assets/gallery/iita-yas/yas-field-selfie-thumb.jpg",
+        "title": "Learning from the Ground Up",
+        "tagline": "Every harvest begins with learning.",
+        "caption": "Learning from the Ground Up",
+        "story": [
+          "The journey started with understanding the process behind yam production. These field sessions helped me connect what I was learning with the practical work involved in growing yam."
+        ],
+        "group": "Yam Seed Production",
+        "more": [
+          {
+            "src": "assets/gallery/iita-yas/yas-yam-demo.jpg",
+            "thumb": "assets/gallery/iita-yas/yas-yam-demo-thumb.jpg",
+            "caption": "Learning from the Ground Up"
+          }
+        ]
+      },
+      {
+        "src": "assets/gallery/iita-yas/yas-yam-vines.jpg",
+        "thumb": "assets/gallery/iita-yas/yas-yam-vines-thumb.jpg",
+        "title": "More Than Just a Yam",
+        "tagline": "",
+        "caption": "More Than Just a Yam",
+        "story": [
+          "Seeing the rows of vines developing made the process more tangible, giving me a closer look at an approach to yam propagation and the work involved in producing planting material."
+        ]
+      },
+      {
+        "src": "assets/gallery/iita-yas/yas-yam-seed-crate.jpg",
+        "thumb": "assets/gallery/iita-yas/yas-yam-seed-crate-thumb.jpg",
+        "title": "Growing Beyond the Traditional Method",
+        "tagline": "Exploring yam production through vine propagation.",
+        "caption": "Growing Beyond the Traditional Method",
+        "story": [
+          "We also worked with yam vines grown in bags, an approach that introduced me to another aspect of yam propagation. It was an opportunity to learn about the process of growing planting material and the possibilities it offers for future production."
+        ]
+      },
+      {
+        "src": "assets/gallery/iita-yas/yas-apiary-group.jpg",
+        "thumb": "assets/gallery/iita-yas/yas-apiary-group-thumb.jpg",
+        "title": "A Different Side of Agriculture",
+        "tagline": "Discovering that agriculture has more than one path.",
+        "caption": "A Different Side of Agriculture",
+        "story": [
+          "After exploring yam production, the apiary training introduced me to another side of agriculture. It was an opportunity to step into an unfamiliar area, broaden my perspective, and discover a different set of skills and possibilities within the agricultural space."
+        ],
+        "group": "Apiary Training"
+      },
+      {
+        "src": "assets/gallery/iita-yas/yas-bee-suits.jpg",
+        "thumb": "assets/gallery/iita-yas/yas-bee-suits-thumb.jpg",
+        "title": "Stepping into the Experience",
+        "tagline": "Some lessons are best experienced firsthand.",
+        "caption": "Stepping into the Experience",
+        "story": [
+          "Getting suited up was part of stepping into an experience that was new to me. Beyond the classroom, I was getting a closer look at what beekeeping involves and experiencing another aspect of agricultural practice for myself."
+        ]
+      },
+      {
+        "src": "assets/gallery/iita-yas/yas-hives-group.jpg",
+        "thumb": "assets/gallery/iita-yas/yas-hives-group-thumb.jpg",
+        "title": "Among the Hives",
+        "tagline": "Getting closer to a world I was still learning about.",
+        "caption": "Among the Hives",
+        "story": [
+          "Being around the hives gave me a different perspective on beekeeping. It was one thing to learn about another area of agriculture, but another to experience its environment firsthand and begin to appreciate the work behind it."
+        ]
+      },
+      {
+        "src": "assets/gallery/iita-yas/yas-hive-lid.jpg",
+        "thumb": "assets/gallery/iita-yas/yas-hive-lid-thumb.jpg",
+        "title": "Another Piece of the Picture",
+        "tagline": "Every new experience broadens the perspective.",
+        "caption": "Another Piece of the Picture",
+        "story": [
+          "The apiary sessions added another dimension to my time with YAS. Alongside yam production, they helped me appreciate the variety within agriculture and the different opportunities that can grow from understanding it."
+        ]
+      },
+      {
+        "src": "assets/gallery/iita-yas/yas-cohort.jpg",
+        "thumb": "assets/gallery/iita-yas/yas-cohort-thumb.jpg",
+        "title": "One Journey, Shared with Others",
+        "tagline": "Celebrating the end of a learning experience.",
+        "caption": "One Journey, Shared with Others",
+        "story": [
+          "The cohort completion ceremony marked the end of this stage of the programme. It was a moment to celebrate what we had learned and the experience we had shared with fellow participants."
+        ]
+      },
+      {
+        "src": "assets/gallery/iita-yas/yas-certificate-day.jpg",
+        "thumb": "assets/gallery/iita-yas/yas-certificate-day-thumb.jpg",
+        "title": "A Record of the Journey",
+        "tagline": "The certificate is a milestone, not the finish line.",
+        "caption": "A Record of the Journey",
+        "story": [
+          "Receiving my certificate of completion was a reminder of the time and effort invested in the programme. More importantly, it gave me something to build on as I continued exploring opportunities in agriculture."
+        ],
+        "more": [
+          {
+            "src": "assets/gallery/iita-yas/yas-certificate.jpg",
+            "thumb": "assets/gallery/iita-yas/yas-certificate-thumb.jpg",
+            "fit": "contain",
+            "caption": "Certificate of Participation, May 2025"
+          }
+        ]
+      },
+      {
+        "src": "assets/gallery/iita-yas/yas-broilnest-cert.jpg",
+        "thumb": "assets/gallery/iita-yas/yas-broilnest-cert-thumb.jpg",
+        "fit": "contain",
+        "title": "What Came Next: Broilnest Ventures",
+        "tagline": "From training to a registered business.",
+        "caption": "What Came Next: Broilnest Ventures",
+        "story": [
+          "Completing the YAS programme was one milestone. Taking a step towards building something of my own was another.",
+          "After the programme, I registered Broilnest Ventures, a farming business, with the Corporate Affairs Commission (CAC).",
+          "For me, this was a way of taking what I had been learning beyond the training environment. The programme introduced me to practical aspects of agriculture, while registering the business gave me a starting point for developing my own agribusiness journey.",
+          "There is still more to learn and build, but Broilnest Ventures represents a step from learning about agriculture to working towards putting that knowledge into practice.",
+          "The training was a chapter. Building something of my own is the next one."
+        ]
+      }
+    ],
+    "intro": {
+      "title": "YAS: Learning Agriculture Beyond the Classroom",
+      "tagline": "Two areas of agriculture. One journey of learning.",
+      "text": [
+        "My experience with YAS introduced me to two different sides of agriculture: yam seed production and beekeeping. From working with yam vines and growing in bags to learning about apiary practices, the programme gave me an opportunity to experience agriculture through practical training rather than theory alone."
+      ]
+    }
   },
   "siyb": {
-    title: "Start Your Business Programme",
-    issuer: "International Labour Organization (ILO SYB)",
-    badge: "Aug 2025", badgeClass: "badge-date",
-    logo: "assets/logo_siyb_ilo.png",
-    tags: ["Business Planning", "ILO SIYB", "Enterprise"],
-    description: "Entrepreneurship training from the ILO Start and Improve Your Business (SIYB) programme, covering business planning and enterprise basics.",
-    layout: "story",
-    galleryHeading: "My SIYB Story",
-    gallery: [
-      { src: "assets/gallery/siyb/siyb-group-steps.jpg", thumb: "assets/gallery/siyb/siyb-group-steps-thumb.jpg",
-        title: "Day One at SYB", tagline: "The cohort on the steps",
-        caption: "The SIYB cohort on the steps outside the venue",
-        story: [
-          "The cohort gathered on the steps outside the training venue for a group photo. We came from different backgrounds and with different business ideas, all there to learn how to start a business properly.",
-          "The ILO’s Start and Improve Your Business (SIYB) programme is designed for people at the very beginning of the entrepreneurship journey, helping turn an idea into a plan."] },
-      { src: "assets/gallery/siyb/siyb-classroom.jpg", thumb: "assets/gallery/siyb/siyb-classroom-thumb.jpg",
-        title: "In Class", tagline: "Learning to plan the business",
-        caption: "Facilitator presenting the Start Your Business course",
-        story: [
-          "A facilitator walks the class through a session, with the Start Your Business slides on the projector and workbooks and notes spread across the table.",
-          "The course works through the essentials of starting out, such as testing your business idea, understanding customers and competitors, costing and pricing, and planning your finances, so that you finish with a business plan of your own."] },
-      { src: "assets/gallery/siyb/siyb-workbooks.jpg", thumb: "assets/gallery/siyb/siyb-workbooks-thumb.jpg",
-        title: "Workbooks in Hand", tagline: "The plan starts here",
-        caption: "Participants holding their Start Your Business workbooks",
-        story: [
-          "With our Start Your Business workbooks outside the venue. The workbook is at the heart of the course, and its exercises are completed for your own business idea.",
-          "Working on your own idea as you go makes the course practical rather than theoretical, and gives you something real to take away."] }
-    ]
+    "title": "Start Your Business Programme",
+    "issuer": "International Labour Organization (ILO SYB)",
+    "badge": "Aug 2025",
+    "badgeClass": "badge-date",
+    "logo": "assets/logo_siyb_ilo.png",
+    "tags": [
+      "Business Planning",
+      "ILO SIYB",
+      "Enterprise"
+    ],
+    "description": "Entrepreneurship training from the ILO Start and Improve Your Business (SIYB) programme, covering business planning and enterprise basics.",
+    "layout": "story",
+    "gallery": [
+      {
+        "src": "assets/gallery/siyb/siyb-group-steps.jpg",
+        "thumb": "assets/gallery/siyb/siyb-group-steps-thumb.jpg",
+        "title": "Beyond Having an Idea",
+        "tagline": "Every business starts somewhere.",
+        "caption": "Beyond Having an Idea",
+        "story": [
+          "Having a business idea is one thing; understanding what it takes to turn that idea into something sustainable is another. The SIYB programme gave me an opportunity to explore the thinking behind starting and running a business, looking beyond the idea itself to the decisions that help it grow."
+        ]
+      },
+      {
+        "src": "assets/gallery/siyb/siyb-classroom.jpg",
+        "thumb": "assets/gallery/siyb/siyb-classroom-thumb.jpg",
+        "title": "The Business Behind the Idea",
+        "tagline": "Learning to look at the bigger picture.",
+        "caption": "The Business Behind the Idea",
+        "story": [
+          "The experience helped me consider entrepreneurship from a more practical perspective: planning, understanding customers, managing resources, and thinking about what makes a business work. These are lessons that go beyond starting a business; they’re about making thoughtful decisions as it develops."
+        ]
+      },
+      {
+        "src": "assets/gallery/siyb/siyb-workbooks.jpg",
+        "thumb": "assets/gallery/siyb/siyb-workbooks-thumb.jpg",
+        "title": "Taking the Lessons Forward",
+        "tagline": "Learning today, building for tomorrow.",
+        "caption": "Taking the Lessons Forward",
+        "story": [
+          "I see the knowledge gained through SIYB as something I can carry into future ventures. Whether developing an existing idea or exploring a new opportunity, understanding the business side of things is an important part of turning ambition into action."
+        ]
+      }
+    ],
+    "intro": {
+      "title": "SIYB: Learning to Think Like an Entrepreneur",
+      "tagline": "Turning ideas into something that can work.",
+      "text": []
+    }
   },
   "icse": {
-    title: "International Conference on Smart Education and Digital Literacy (ICSE)",
-    issuer: "UBEC Digital Resource Center (DRC) · Volunteer",
-    badge: "6 to 9 May 2025", badgeClass: "badge-date",
-    logo: "assets/logo_icse_ubec.png",
-    tags: ["Smart Education", "Timekeeping & AV", "UBEC DRC"],
-    description: "Volunteered at ICSE 2025 with the UBEC Digital Resource Center, supporting timekeeping and audio-visual needs during the conference.",
-    gallery: [
-      { src: "assets/gallery/icse/icse-stage-timer.jpg", caption: "Session timer running on the stage screen" },
-      { src: "assets/gallery/icse/icse-stage-backdrop.jpg", caption: "Main stage and sponsor backdrop at ICSE 2025" },
-      { src: "assets/gallery/icse/icse-guests.jpg", caption: "Guests and delegates at the conference venue" },
-      { src: "assets/gallery/icse/icse-official-badge.jpg", caption: "My Officials badge for ICSE 2025" }
+    "title": "International Conference on Smart Education and Digital Literacy (ICSE)",
+    "issuer": "UBEC Digital Resource Center (DRC) · Volunteer",
+    "badge": "6 to 9 May 2025",
+    "badgeClass": "badge-date",
+    "logo": "assets/logo_icse_ubec.png",
+    "tags": [
+      "Smart Education",
+      "Timekeeping & AV",
+      "UBEC DRC"
+    ],
+    "description": "Volunteered at ICSE 2025 with the UBEC Digital Resource Center, supporting timekeeping and audio-visual needs during the conference.",
+    "gallery": [
+      {
+        "src": "assets/gallery/icse/icse-stage-timer.jpg",
+        "caption": "Session timer running on the stage screen"
+      },
+      {
+        "src": "assets/gallery/icse/icse-stage-backdrop.jpg",
+        "caption": "Main stage and sponsor backdrop at ICSE 2025"
+      },
+      {
+        "src": "assets/gallery/icse/icse-guests.jpg",
+        "caption": "Guests and delegates at the conference venue"
+      },
+      {
+        "src": "assets/gallery/icse/icse-official-badge.jpg",
+        "caption": "My Officials badge for ICSE 2025"
+      }
     ]
   }
 };
