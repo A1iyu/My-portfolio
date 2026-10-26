@@ -378,6 +378,7 @@ function initAboutStory() {
     const open = !wrap.classList.contains('open');
     wrap.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', String(open));
+    const lbl = toggle.querySelector('.journey-label'); if (lbl) lbl.textContent = open ? 'Close story' : 'Read my story';
     if (open) panel.removeAttribute('inert'); else panel.setAttribute('inert', '');
   });
 }

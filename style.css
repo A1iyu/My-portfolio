@@ -2678,3 +2678,26 @@ a.cert-card:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
 }
+
+/* About Me: make the dropdown obvious (circled arrow + label + gentle bounce) */
+.journey-cue {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-teal);
+  background: rgba(45, 212, 191, 0.08);
+  display: inline-flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: background var(--transition-normal), transform var(--transition-normal);
+}
+.journey-cue .chapter-chevron { margin: -4px 0 0; width: 11px; height: 11px; border-width: 3px; }
+.about-journey.open .journey-cue .chapter-chevron { margin: 4px 0 0; }
+.journey-toggle:hover .journey-cue { background: rgba(45, 212, 191, 0.2); }
+.about-journey:not(.open) .journey-cue { animation: cue-bob 1.8s ease-in-out infinite; }
+@keyframes cue-bob {
+  0%, 100% { transform: translateY(0); box-shadow: 0 0 0 0 rgba(45, 212, 191, 0.45); }
+  50%      { transform: translateY(5px); box-shadow: 0 0 0 9px rgba(45, 212, 191, 0); }
+}
+.journey-label { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 400; letter-spacing: 0.02em; color: var(--accent-teal); }
+.journey-toggle { gap: 1.1rem; }
+@media (max-width: 520px) { .journey-label { display: none; } }
+@media (prefers-reduced-motion: reduce) { .about-journey:not(.open) .journey-cue { animation: none; } }
